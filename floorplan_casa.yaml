@@ -138,6 +138,31 @@
               }
             return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
             '
+        
+        - name: Condizonatore
+          entities:
+            - climate.condizionatore_salotto
+          image_template: '
+            var imageName = "";
+            switch (entity.state) {
+              case "off":
+                imageName = "condizionatore_off";
+                break;
+              case "dry":
+                imageName = "condizionatore_dry";
+                break;
+              case "cool":
+                imageName = "condizionatore_cool";
+                break;
+              case "fan_only":
+                imageName = "condizionatore_fan_only";
+                break;
+              case "heat":
+                imageName = "condizionatore_heat";
+                break;
+              }
+            return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
+            '
 
         - name: Light
           entities:
