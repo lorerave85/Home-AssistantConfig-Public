@@ -1,0 +1,12 @@
+---
+icon: mdi:video-vintage
+title: Cam
+cards:
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: picture-entity
+      entity: camera.camera
+      image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
+      show_state: false
+      show_name: true
+      aspect_ratio: 50%

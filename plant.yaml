@@ -1,0 +1,7 @@
+pianta_grassa:
+  sensors:
+    moisture: sensor.plant_moisture_00
+
+gerani:
+  sensors:
+    moisture: sensor.plant_moisture_01

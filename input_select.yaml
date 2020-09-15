@@ -1,0 +1,18 @@
+cube_mode:
+  name: modalità cubo
+  options:
+    - lampadario
+    - riscaldamento
+    - lampada_turca
+    - lumino
+    - cinque
+    - sei
+
+mediaplayer_google:
+  name: media player 
+  options:
+    - Soggiorno
+    - Ludovica
+
+   
+   

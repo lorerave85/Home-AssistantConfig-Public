@@ -1,0 +1,44 @@
+---
+icon: mdi:lightbulb-on
+title: Light
+cards:
+  
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Lampadario
+      cards:
+        - type: light
+          entity: light.aqara_01
+          name: " "
+        - type: light
+          entity: light.aqara_02
+          name: " "
+        - type: light
+          entity: light.aqara_03
+          name: " "
+      
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Libreria
+      cards:
+        - type: light
+          name: " "
+          icon: mdi:bookshelf
+          entity: light.color_temperature_light_ikea
+
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Scrivania
+      cards:
+        - type: button
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+          show_icon: true
+          show_name: false
+          entity: switch.on_off_plug_in_unit_12
+          icon: 'mdi:desk-lamp'

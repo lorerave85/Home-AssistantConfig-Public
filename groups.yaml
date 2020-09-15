@@ -1,0 +1,8 @@
+#window_cover:
+#  name: Window Cover
+#  entities:
+#  - cover.window_cover
+#  - input_number.window_set_position
+#  - input_number.window_position
+#  - timer.window_up
+#  - timer.window_down

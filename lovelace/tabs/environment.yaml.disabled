@@ -1,0 +1,242 @@
+---
+icon: mdi:chart-line
+title: Environment
+cards:
+
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Soggiorno
+      cards:
+      - type: 'custom:tempometer-gauge-card'
+        entity: sensor.temperature_5
+        horizontal: true
+        min: 10
+        max: 40
+        title: Temperatura 
+        style: custom
+        icon1: mdi:snowflake
+        icon2: mdi:weather-sunny
+        icon3: mdi:fire
+        severity:
+          green: 20
+          yellow: 24
+          red: 27
+      - type: 'custom:tempometer-gauge-card'
+        entity: sensor.humidity_3 
+        horizontal: true
+        min: 0
+        max: 100
+        title: Umidità
+        style: humidity
+        severity:
+          green: 40
+          yellow: 50
+          red: 70
+      #- type: 'custom:tempometer-gauge-card'  
+      #  entity: sensor.pressure_4
+      #  horizontal: true
+      #  min: 800
+      #  max: 1100
+      #  title: Barometro
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Cucina
+      cards:
+      - type: 'custom:tempometer-gauge-card'
+        entity: sensor.sensor_cucina_temperature
+        horizontal: true
+        min: 10
+        max: 40
+        title: Temperatura 
+        style: custom
+        icon1: mdi:snowflake
+        icon2: mdi:weather-sunny
+        icon3: mdi:fire
+        severity:
+          green: 20
+          yellow: 24
+          red: 27
+      - type: 'custom:tempometer-gauge-card'
+        entity: sensor.sensor_cucina_humidity
+        horizontal: true
+        min: 0
+        max: 100
+        title: Umidità
+        style: humidity
+        severity:
+          green: 40
+          yellow: 50
+          red: 70
+        
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Camera
+      cards:
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.sensor_camera_temperature
+          horizontal: true
+          min: 10
+          max: 40
+          title: Temperatura 
+          style: custom
+          icon1: mdi:snowflake
+          icon2: mdi:weather-sunny
+          icon3: mdi:fire
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.sensor_camera_humidity
+          horizontal: true
+          min: 0
+          max: 100
+          title: Umidità
+          style: humidity
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+    
+    - type: horizontal-stack
+      title: Ludovica
+      cards:
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.sensor_ludovica_temperature
+          horizontal: true
+          min: 10
+          max: 40
+          title: Temperatura 
+          style: custom
+          icon1: mdi:snowflake
+          icon2: mdi:weather-sunny
+          icon3: mdi:fire
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.sensor_ludovica_humidity
+          horizontal: true
+          min: 0
+          max: 100
+          title: Umidità
+          style: humidity
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Bagno
+      cards:
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.sensor_bagno_temperature
+          horizontal: true
+          min: 10
+          max: 40
+          title: Temperatura 
+          style: custom
+          icon1: mdi:snowflake
+          icon2: mdi:weather-sunny
+          icon3: mdi:fire
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.sensor_bagno_humidity
+          horizontal: true
+          min: 0
+          max: 100
+          title: Umidità
+          style: humidity
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+    
+    - type: horizontal-stack
+      title: Lavanderia
+      cards:
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.temperature_10
+          horizontal: true
+          min: 10
+          max: 40
+          title: Temperatura 
+          style: custom
+          icon1: mdi:snowflake
+          icon2: mdi:weather-sunny
+          icon3: mdi:fire
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.humidity_11 
+          horizontal: true
+          min: 0
+          max: 100
+          title: Umidità
+          style: humidity
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Clima esterno
+      cards:
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.external_temperature
+          horizontal: true
+          min: -10
+          max: 50
+          title: Temperatura 
+          style: custom
+          icon1: mdi:snowflake
+          icon2: mdi:weather-sunny
+          icon3: mdi:fire
+          severity:
+            green: 22
+            yellow: 24
+            red: 27
+        - type: 'custom:tempometer-gauge-card'
+          entity: sensor.external_humidity
+          horizontal: true
+          min: 0
+          max: 100
+          title: Umidità
+          style: humidity
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+    - type: horizontal-stack
+      cards:
+        - type: custom:tempometer-gauge-card
+          entity: sensor.wind_2
+          horizontal: true
+          min: 0
+          max: 108
+          style: custom
+          icon1: mdi:weather-windy-variant
+          icon2: mdi:weather-windy
+          icon3: mdi:weather-tornado
+          severity:
+            green: 10
+            yellow: 72
+            red: 108
+
+
+
+
+

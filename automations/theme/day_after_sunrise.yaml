@@ -1,0 +1,11 @@
+- id: 72b68238385147f6ae5e801746401b45
+  alias: Set Day Mode Theme after Sunrise
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: +00:30:00
+  action:
+  - service: frontend.set_theme
+    data:
+      name: default
+  

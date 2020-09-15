@@ -1,0 +1,53 @@
+- id: '15898345480926622'
+  alias: Alza Luminosita - rotazione oraria
+  description: ''
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: ''
+    type: remote_turned_clockwise
+  condition:
+  - condition: state
+    entity_id: input_select.cube_mode
+    state: lampadario
+  action:
+  - device_id: 4ac881ee730a4c4094b6ff02459fa4ee
+    domain: light
+    entity_id: light.aqara_01
+    type: brightness_increase
+  - device_id: 5617f4c723144a378a89e3c8dde8b5da
+    domain: light
+    entity_id: light.aqara_02
+    type: brightness_increase
+  - device_id: 414027ab19084f6e81986eb9f0500339
+    domain: light
+    entity_id: light.aqara_03
+    type: brightness_increase
+
+- id: '15898345480926611'
+  alias: Abbassa Luminosita - rotazione antioraria
+  description: ''
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: ''
+    type: remote_turned_counter_clockwise
+  condition:
+  - condition: state
+    entity_id: input_select.cube_mode
+    state: lampadario
+  action:
+  - device_id: 4ac881ee730a4c4094b6ff02459fa4ee
+    domain: light
+    entity_id: light.aqara_01
+    type: brightness_decrease
+  - device_id: 5617f4c723144a378a89e3c8dde8b5da
+    domain: light
+    entity_id: light.aqara_02
+    type: brightness_decrease
+  - device_id: 414027ab19084f6e81986eb9f0500339
+    domain: light
+    entity_id: light.aqara_03
+    type: brightness_decrease

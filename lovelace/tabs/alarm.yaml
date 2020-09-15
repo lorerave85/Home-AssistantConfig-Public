@@ -1,0 +1,14 @@
+---
+icon: mdi:security
+title: Alarm
+cards:
+- type: alarm-panel
+  name: Panello allarme
+  entity: alarm_control_panel.allarme
+  states:
+    - arm_home
+    - arm_away
+
+
+
+

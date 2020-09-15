@@ -1,0 +1,18 @@
+---
+icon: mdi:bacteria
+title: Coronavirus
+cards:
+- type: glance
+  entities:
+  - entity: sensor.italy_coronavirus_confirmed
+    icon: 'mdi:emoticon-neutral-outline'
+    name: Confermati
+  - entity: sensor.italy_coronavirus_recovered
+    icon: 'mdi:emoticon-happy-outline'
+    name: Guariti
+  - entity: sensor.italy_coronavirus_deaths
+    icon: 'mdi:emoticon-dead-outline'
+    name: Morti
+  - entity: sensor.italy_coronavirus_current
+    icon: 'mdi:emoticon-frown-outline'
+    name: Contagiati

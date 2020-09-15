@@ -1,0 +1,10 @@
+- id: 94401ca864bc47c5a911671cdb490c51
+  alias: Set Night Mode Theme after Sunset
+  trigger:
+  - platform: sun
+    event: sunset
+  action:
+  - service: frontend.set_theme
+    data:
+      name: slate
+  

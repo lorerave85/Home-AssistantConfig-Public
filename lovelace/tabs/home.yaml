@@ -1,0 +1,99 @@
+---
+icon: mdi:home
+title: Home
+cards:
+
+- type: custom:vertical-stack-in-card
+  title: Previsione meteo
+  cards:
+    - type: weather-forecast
+      entity: weather.casa
+
+- type: entities
+  entities:
+    - type: custom:mini-media-player
+      entity: media_player.googlehome_soggiorno
+      group: true
+    - type: custom:mini-media-player
+      entity: media_player.googlehome_ludovica
+      group: true
+    - type: custom:mini-media-player
+      entity: media_player.samsung_ue32es5500
+      group: true
+
+- type: custom:xiaomi-vacuum-card
+  entity: vacuum.aspirapolvere
+  image: false
+  name: Aspirapolvere
+  vendor: xiaomi
+  buttons:
+    start: true
+    pause: true
+    stop: true
+    locate: false
+    return: true
+  icons:
+    start: mdi:play
+    pause: mdi:pause
+    stop: mdi:stop
+    locate: mdi:other-icon
+    return: mdi:home
+  labels:
+    status: Stato
+    battery: Batteria
+    mode: Modalità
+    main_brush: Spazzola Principale
+    side_brush: Spazzola Laterale
+    filter: Filtro
+    sensor: Sensore
+
+- type: horizontal-stack
+  cards:
+    - type: custom:air-filter
+      modes:
+        - auto
+        - silent
+        - High
+      entity: fan.air_purifier
+      aspect_ratio: '.6'
+          
+- type: custom:mini-graph-card
+  name: ENERGY CONSUMPTION
+  icon: mdi:flash
+  entities:
+    - entity: sensor.power_line
+  show:
+    graph: bar
+
+- type: thermostat
+  entity: climate.condizionatore_salotto
+  
+- type: custom:vertical-stack-in-card
+  title: Giardino
+  cards:
+    - type: glance
+      entities:
+        - entity: sensor.plant_moisture_00
+          icon: mdi:cactus
+          name: piante grasse
+        - entity: sensor.plant_moisture_01
+          icon: mdi:flower-tulip
+          name: vasi fioriti
+        - entity: sensor.plant_moisture_00
+          icon: mdi:flower-tulip
+        - entity: sensor.plant_moisture_01
+          icon: mdi:flower-tulip
+    - type: glance
+      entities:
+        - entity: switch.relepompa1
+          name: Pompa 1
+          icon: 'mdi:water-pump'
+          show_state: false
+          tap_action:
+            action: toggle
+        - entity: switch.relepompa2
+          name: Pompa 2
+          icon: 'mdi:water-pump'
+          show_state: false
+          tap_action:
+            action: toggle

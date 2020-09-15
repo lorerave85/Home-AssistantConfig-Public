@@ -1,0 +1,18 @@
+- id: '1581540038197921'
+  alias: Aperta Finestra Bagno
+  trigger:
+    entity_id: binary_sensor.openclose_18
+    from: 'off'
+    platform: state
+    to: 'on'
+    for:
+      seconds: 1
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.allarme
+    state: armed_away
+  action:
+    service: notify.famiglia
+    data:
+      message: Rilevata apertura finestra bagno
+      title: Domotica - finestre

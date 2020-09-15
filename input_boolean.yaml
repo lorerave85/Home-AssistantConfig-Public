@@ -1,0 +1,59 @@
+#air_purifier_status:
+#  name: stato purificatore d'aria
+#  initial: off
+#  icon: mdi:fan
+
+# Tapparella Cucina
+kitchen_open_status:
+  name: stato apertura finestra cucina
+  initial: off
+kitchen_close_status:
+  name: stato chiusura finestra cucina
+  initial: off
+kitchen_stop_status:
+  name: stato stop finestra cucina
+  initial: off
+
+# Tapparella Soggiorno
+livingroom_open_status:
+  name: stato apertura finestra soggiorno
+  initial: off
+livingroom_close_status:
+  name: stato chiusura finestra soggiorno
+  initial: off
+livingroom_stop_status:
+  name: stato stop finestra soggiorno
+  initial: off
+
+# Tapparella Camera
+bedroom_open_status:
+  name: stato apertura finestra camera
+  initial: off
+bedroom_close_status:
+  name: stato chiusura finestra camera
+  initial: off
+bedroom_stop_status:
+  name: stato stop finestra camera
+  initial: off
+
+# Tenda Balcone
+balcony_open_status:
+  name: stato apertura tenda balcone
+  initial: off
+balcony_close_status:
+  name: stato chiusura tenda balcone
+  initial: off
+balcony_stop_status:
+  name: stato stop tenda balcone 
+  initial: off
+
+# Tenda Ludovica
+ludovica_open_status:
+  name: stato apertura tenda ludovica
+  initial: off
+ludovica_close_status:
+  name: stato chiusura tenda ludovica
+  initial: off
+ludovica_stop_status:
+  name: stato stop tenda ludovica 
+  initial: off

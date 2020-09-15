@@ -1,0 +1,14 @@
+- id: '1259164417484999'
+  alias: Tocco faccia 4 - Lumino
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: side_4
+    type: remote_double_tap
+  condition: []
+  action:
+  - data:
+      option: lumino
+    entity_id: input_select.cube_mode
+    service: input_select.select_option

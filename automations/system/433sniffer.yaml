@@ -1,0 +1,9 @@
+- id: a4195fe6aef200b66
+  alias: 'system Start 433Mhz sniffer'
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - delay: 00:01:00
+    - service: rest_command.start_433mhz_sniffer
+  

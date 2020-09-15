@@ -1,0 +1,37 @@
+- id: '15898345420926622'
+  alias: Lumino Alza Luminosita - rotazione oraria
+  description: ''
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: ''
+    type: remote_turned_clockwise
+  condition:
+  - condition: state
+    entity_id: input_select.cube_mode
+    state: lumino
+  action:
+  - device_id: ab7f14bf765242419bb5adc8de0cc810
+    domain: light
+    entity_id: light.color_temperature_light_ikea
+    type: brightness_increase
+
+- id: '15898345420926611'
+  alias: Lumino Abbassa Luminosita - rotazione antioraria
+  description: ''
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: ''
+    type: remote_turned_counter_clockwise
+  condition:
+  - condition: state
+    entity_id: input_select.cube_mode
+    state: lumino
+  action:
+  - device_id: ab7f14bf765242419bb5adc8de0cc810
+    domain: light
+    entity_id: light.color_temperature_light_ikea
+    type: brightness_decrease

@@ -1,0 +1,32 @@
+- id: '12259164741301599'
+  alias: Shake cube
+  description: ''
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: ''
+    type: remote_gyro_activated
+  condition: []
+  action:
+  - device_id: f24028da8a0d4deeae8d3a38b25bb9f2
+    domain: switch
+    entity_id: switch.on_off_plug_in_unit_12
+    type: turn_off
+  - device_id: 4ac881ee730a4c4094b6ff02459fa4ee
+    domain: light
+    entity_id: light.aqara_01
+    type: turn_off
+  - device_id: 5617f4c723144a378a89e3c8dde8b5da
+    domain: light
+    entity_id: light.aqara_02
+    type: turn_off
+  - device_id: 414027ab19084f6e81986eb9f0500339
+    domain: light
+    entity_id: light.aqara_03
+    type: turn_off
+  - device_id: ab7f14bf765242419bb5adc8de0cc810
+    domain: light
+    entity_id: light.color_temperature_light_ikea
+    type: turn_off
+ 

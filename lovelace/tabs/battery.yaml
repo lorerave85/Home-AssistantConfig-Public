@@ -1,0 +1,63 @@
+---
+icon: mdi:battery
+title: Battery
+cards:
+- type: custom:vertical-stack-in-card
+  title: Batterie sensori temperatura
+  cards:
+    - type: entities
+      entities:
+      - type: 'custom:battery-entity'
+        entity: sensor.sensor_camera_battery
+        name: Camera
+      - type: 'custom:battery-entity'
+        entity: sensor.sensor_ludovica_battery
+        name: Ludovica
+      - type: 'custom:battery-entity'
+        entity: sensor.sensor_bagno_battery
+        name: Bagno
+      - type: 'custom:battery-entity'
+        entity: sensor.multi_sensor_lavanderia_battery_level
+        name: Lavanderia
+      - type: 'custom:battery-entity'
+        entity: sensor.multi_sensor_battery_level
+        name: Soggiorno
+      - type: 'custom:battery-entity'
+        entity: sensor.sensor_cucina_battery
+        name: Cucina
+
+- type: custom:vertical-stack-in-card
+  title: Batterie sensori finestre
+  cards:
+    - type: entities
+      entities:
+      - type: 'custom:battery-entity'
+        entity: sensor.openclose_16_battery_level
+        name: Cucina
+      - type: 'custom:battery-entity'
+        entity: sensor.openclose_14_battery_level
+        name: Portafinestra Soggiorno
+      - type: 'custom:battery-entity'
+        entity: sensor.openclose_19_battery_level
+        name: Finestra Soggiorno
+      - type: 'custom:battery-entity'
+        entity: sensor.openclose_15_battery_level
+        name: Ludovica
+      - type: 'custom:battery-entity'
+        entity: sensor.openclose_17_battery_level
+        name: Camera
+      - type: 'custom:battery-entity'   
+        entity: sensor.openclose_18_battery_level
+        name: Bagno
+
+- type: custom:vertical-stack-in-card
+  title: Batterie switch
+  cards:
+    - type: entities
+      entities:
+      - type: 'custom:battery-entity'
+        entity: sensor.mi_magic_cube_battery_level
+        name: Magic Cube
+
+
+

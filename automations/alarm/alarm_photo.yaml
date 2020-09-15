@@ -1,0 +1,21 @@
+- id: '1581540038129'
+  alias: Send photo
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.allarme
+    to: disarmed
+  action:
+
+  - service: camera.snapshot
+    data:
+      entity_id: camera.camera_stream0_0_2
+      filename: /config/www/cam_captures/00.jpg
+    
+
+  - service: notify.famiglia
+    data:
+      message: ALARM! l'allarme è disattivato
+      data:
+        photo:
+          - file: /config/www/cam_captures/00.jpg
+            caption: Picture Title xy

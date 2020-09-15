@@ -1,0 +1,13 @@
+# Locate: /etc/systemd/system
+
+
+[Unit]
+Description=1090 sniffer
+After=docker.service hassio-supervisor.service
+
+[Service]
+Type=simple
+ExecStart=/etc/systemd/system/1090sniffer.sh
+
+[Install]
+WantedBy=multi-user.target

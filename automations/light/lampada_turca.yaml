@@ -1,0 +1,39 @@
+- id: '1591641804579299'
+  alias: Spegni lampada turca
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: side_3
+    type: remote_moved
+  condition:
+  - condition: device
+    device_id: f24028da8a0d4deeae8d3a38b25bb9f2
+    domain: switch
+    entity_id: switch.on_off_plug_in_unit_12
+    type: is_on
+  action:
+  - device_id: f24028da8a0d4deeae8d3a38b25bb9f2
+    domain: switch
+    entity_id: switch.on_off_plug_in_unit_12
+    type: turn_off
+
+- id: '1591641804579399'
+  alias: Accendi lampada turca
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: side_3
+    type: remote_moved
+  condition:
+  - condition: device
+    device_id: f24028da8a0d4deeae8d3a38b25bb9f2
+    domain: switch
+    entity_id: switch.on_off_plug_in_unit_12
+    type: is_off
+  action:
+  - device_id: f24028da8a0d4deeae8d3a38b25bb9f2
+    domain: switch
+    entity_id: switch.on_off_plug_in_unit_12
+    type: turn_on

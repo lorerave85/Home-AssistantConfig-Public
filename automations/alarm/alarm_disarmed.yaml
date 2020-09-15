@@ -1,0 +1,10 @@
+- id: '1581540038199'
+  alias: Send notification when alarm is Disarmed
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.allarme
+    to: disarmed
+  action:
+  - service: notify.famiglia
+    data_template:
+      message: ALARM! l'allarme è disattivato

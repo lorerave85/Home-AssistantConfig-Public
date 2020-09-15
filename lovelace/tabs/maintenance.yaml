@@ -1,0 +1,64 @@
+---
+icon: mdi:wrench
+title: Maintenance
+cards:
+- type: custom:vertical-stack-in-card
+  title: Gestione HASSIO
+  cards:
+    - type: glance
+      show_name: true
+      show_state: false
+      entities:
+        - entity: zone.home
+          icon: 'mdi:restart'
+          name: Home Assistant
+          tap_action:
+            action: call-service
+            service: homeassistant.restart
+        - entity: zone.home
+          icon: 'mdi:power'
+          name: Home Assistant
+          tap_action:
+            action: call-service
+            service: hassio.host_shutdown
+    - type: glance
+      show_name: true
+      show_state: false
+      entities:
+        - entity: zone.home
+          icon: 'mdi:restart'
+          name: Config
+          tap_action:
+            action: call-service
+            service: homeassistant.reload_core_config
+        - entity: zone.home
+          icon: 'mdi:restart'
+          name: Automation
+          tap_action:
+            action: call-service
+            service: automation.reload
+        - entity: zone.home
+          icon: 'mdi:restart'
+          name: Theme
+          tap_action:
+            action: call-service
+            service: frontend.reload_themes
+        - entity: zone.home
+          icon: 'mdi:restart'
+          name: Lovelace
+          tap_action:
+            action: call-service
+            service: lovelace.reload_resources
+    - type: glance
+      show_name: true
+      show_state: true
+      entities:
+        - entity: sensor.raspcpu
+        - entity: sensor.memory_use_percent
+        - entity: sensor.disk_use_percent
+
+
+
+
+
+

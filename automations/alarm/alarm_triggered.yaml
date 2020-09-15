@@ -1,0 +1,10 @@
+- id: '1581540038198'
+  alias: Send notification when alarm triggered
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.allarme
+    to: triggered
+  action:
+  - service: notify.famiglia
+    data:
+      message: ALARM! l'allarme è scattato

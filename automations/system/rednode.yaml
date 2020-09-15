@@ -1,0 +1,11 @@
+- id: a4195fe6aef200c61
+  alias: 'system Start_rednode'
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - delay: 00:01:00
+    - service: hassio.addon_start
+      data:
+        addon: a0d7b954_nodered
+  

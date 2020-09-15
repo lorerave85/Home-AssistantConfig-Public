@@ -1,0 +1,208 @@
+---
+icon: mdi:chart-line
+title: Environment
+cards:
+
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Soggiorno
+      cards:
+        - type: gauge
+          name: Temperatura
+          unit: '°C'
+          entity: sensor.temperature_5
+          min: 0
+          max: 40
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: gauge
+          name: Umidità
+          unit: '%'
+          entity: sensor.humidity_3 
+          min: 0
+          max: 100
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Cucina
+      cards:
+        - type: gauge
+          name: Temperatura
+          unit: '°C'
+          entity: sensor.sensor_cucina_temperature
+          min: 0
+          max: 40
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: gauge
+          name: Umidità
+          unit: '%'
+          entity: sensor.sensor_cucina_humidity 
+          min: 0
+          max: 100
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+        
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Camera
+      cards:
+        - type: gauge
+          name: Temperatura
+          unit: '°C'
+          entity: sensor.sensor_camera_temperature
+          min: 0
+          max: 40
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: gauge
+          name: Umidità
+          unit: '%'
+          entity: sensor.sensor_camera_humidity 
+          min: 0
+          max: 100
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+    - type: horizontal-stack
+      title: Ludovica
+      cards:
+        - type: gauge
+          name: Temperatura
+          unit: '°C'
+          entity: sensor.sensor_ludovica_temperature
+          min: 0
+          max: 40
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: gauge
+          name: Umidità
+          unit: '%'
+          entity: sensor.sensor_ludovica_humidity 
+          min: 0
+          max: 100
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Bagno
+      cards:
+        - type: gauge
+          name: Temperatura
+          unit: '°C'
+          entity: sensor.sensor_bagno_temperature
+          min: 0
+          max: 40
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: gauge
+          name: Umidità
+          unit: '%'
+          entity: sensor.sensor_bagno_humidity 
+          min: 0
+          max: 100
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+    - type: horizontal-stack
+      title: Lavanderia
+      cards:
+        - type: gauge
+          name: Temperatura
+          unit: '°C'
+          entity: sensor.temperature_10
+          min: 0
+          max: 40
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: gauge
+          name: Umidità
+          unit: '%'
+          entity: sensor.humidity_11 
+          min: 0
+          max: 100
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+
+
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      title: Clima esterno
+      cards:
+        - type: gauge
+          name: Temperatura
+          unit: '°C'
+          entity: sensor.external_temperature
+          min: 0
+          max: 40
+          severity:
+            green: 20
+            yellow: 24
+            red: 27
+        - type: gauge
+          name: Umidità
+          unit: '%'
+          entity: sensor.external_humidity 
+          min: 0
+          max: 100
+          severity:
+            green: 40
+            yellow: 50
+            red: 70
+    - type: horizontal-stack
+      cards:
+        - type: gauge
+          name: Vento
+          unit: 'Km/h'
+          entity: sensor.wind_2 
+          min: 0
+          max: 100
+          severity:
+            green: 10
+            yellow: 72
+            red: 108
+    - type: horizontal-stack
+      cards:
+        - type: custom:mini-graph-card
+          name: Vento
+          icon: mdi:weather-windy
+          entities:
+            - entity: sensor.wind_2 
+          points_per_hour: 12
+          line_width: 2
+          show:
+            extrema: true
+
+
+
+

@@ -1,0 +1,26 @@
+---
+icon: mdi:fan
+title: Air Purifier
+cards:
+- type: custom:vertical-stack-in-card
+  title: Purificatore D'aria
+  cards:
+    - type: entities
+      entities:
+      - entity: input_select.air_purifier_mode
+    - type: entity-button
+      entity: input_boolean.air_purifier_status
+      hold_action:
+        action: none
+      show_icon: true
+      show_name: true
+      tap_action:
+        action: toggle
+    - type: entity-button
+      entity: binary_sensor.air_status
+      hold_action:
+        action: none
+      show_icon: true
+      show_name: true
+      tap_action:
+        action: toggle

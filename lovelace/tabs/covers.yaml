@@ -1,0 +1,28 @@
+---
+icon: mdi:window-shutter
+title: Tapparelle
+cards:
+- type: custom:vertical-stack-in-card
+  title: Tapparelle
+  cards:
+    - type: entities
+      entities:
+        - entity: cover.kitchen_window_cover
+          name: Cucina
+        - entity: cover.livingroom_window_cover
+          name: Soggiorno
+        - entity: cover.bedroom_window_cover
+          name: Camera
+
+- type: custom:vertical-stack-in-card
+  title: Tende
+  cards:
+    - type: entities
+      entities:
+        - entity: cover.balcony_blind
+          name: Balcone
+        - entity: cover.ludovica_blind
+          name: Ludovica
+
+
+

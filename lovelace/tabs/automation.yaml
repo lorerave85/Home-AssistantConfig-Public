@@ -1,0 +1,103 @@
+---
+icon: mdi:auto-fix
+title: Automation
+cards:
+#- type: custom:vertical-stack-in-card
+#  title: Battery Status
+#  cards:
+- type: custom:auto-entities
+  card:
+    type: entities
+    title: Allarme Finestre/Porta
+    show_header_toggle: false
+  filter:
+    include:
+      - domain: automation
+        options:
+          secondary_info: last-triggered
+        name: "*Finestra*"
+      - domain: automation
+        options:
+          secondary_info: last-triggered
+        name: "*Portafinestra*"
+      - domain: automation
+        options:
+          secondary_info: last-triggered
+        name: "*Porta*"
+  sort:
+    attribute: last_triggered
+
+#- type: custom:auto-entities
+#  card:
+#    type: entities
+#    title: Tema HA
+#    show_header_toggle: false
+#  filter:
+#    include:
+#      - domain: automation
+#        options:
+#          secondary_info: last-triggered
+#        name: "*Theme*"
+#  sort:
+#    attribute: last_triggered
+
+- type: custom:auto-entities
+  card:
+    type: entities
+    title: Giardino
+    show_header_toggle: false
+  filter:
+    include:
+      - domain: automation
+        options:
+          secondary_info: last-triggered
+        name: "*Innaffiare*"
+  sort:
+    attribute: last_triggered
+  attribute: last_triggered
+
+- type: custom:auto-entities
+  card:
+    type: entities
+    title: Allarme
+    show_header_toggle: false
+  filter:
+    include:
+      - domain: automation
+        options:
+          secondary_info: last-triggered
+        name: "*alarm*"
+  sort:
+    attribute: last_triggered
+
+- type: custom:auto-entities
+  card:
+    type: entities
+    title: System
+    show_header_toggle: false
+  filter:
+    include:
+      - domain: automation
+        options:
+          secondary_info: last-triggered
+        name: "*system*"
+  sort:
+    attribute: last_triggered
+
+- type: custom:auto-entities
+  card:
+    type: entities
+    title: Cube
+    show_header_toggle: false
+  filter:
+    include:
+      - domain: automation
+        options:
+          secondary_info: last-triggered
+        name: "*faccia*"
+      - domain: automation
+        options:
+          secondary_info: last-triggered
+        name: "*cube*"
+  sort:
+    attribute: last_triggered

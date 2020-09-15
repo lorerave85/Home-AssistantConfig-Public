@@ -1,0 +1,15 @@
+- id: '72b68238385147f6ae5e801746401b11'
+  alias: Entré door open - 2 mins
+  trigger:
+  - entity_id: binary_sensor.openclose_6
+    from: 'off'
+    platform: state
+    to: 'on'
+    for:
+      seconds: 1
+  condition: []
+  action:
+  - data:
+      entity_id: media_player.soggiorno
+      message: Porta soggiorno aperta
+    service: tts.google_say

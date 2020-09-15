@@ -1,0 +1,63 @@
+title: MrNight House
+icon: mdi:home-city-outline
+#background: center / cover no-repeat url("/local/backgrounds/background-15.gif") fixed 
+resources:
+  - url: /local/custom_ui/lib/battery-entity.js?v=1
+    type: module
+  - url: /local/custom_ui/lib/vertical-stack-in-card.js?v=0.3.3
+    type: js
+  - url: /local/custom_ui/lib/auto-entities.js
+    type: module
+  - url: /local/custom_ui/lib/button-card.js
+    type: module
+  - url: /local/custom_ui/lib/floorplan-card.js
+    type: module
+  - url: /local/custom_ui/lib/mini-graph-card-bundle.js?v=0.9.2
+    type: module
+  #- url: /local/custom_ui/lib/tempometer-gauge-card.js
+  #  type: js
+  - url: /local/custom_ui/lib/air-filter-card.js
+    type: module
+  - url: /local/custom_ui/lib/xiaomi-vacuum-card.js?v=3.0.1
+    type: module
+  - url: /local/custom_ui/lib/mini-media-player-bundle.js?v=1.9.1
+    type: module
+    
+
+views:
+  - !include lovelace/tabs/home.yaml
+  - !include lovelace/tabs/environment.yaml
+  - !include lovelace/tabs/light.yaml
+  #- !include lovelace/tabs/airpurifier.yaml
+  - !include lovelace/tabs/covers.yaml
+  - !include lovelace/tabs/automation.yaml
+  - !include lovelace/tabs/battery.yaml
+  - !include lovelace/tabs/maintenance.yaml
+  - !include lovelace/tabs/alarm.yaml
+  #- !include lovelace/tabs/cam.yaml
+  - !include lovelace/tabs/floorplan.yaml
+  # !include lovelace/tabs/plant.yaml
+  #- !include lovelace/tabs/coronavirus.yaml 
+  - !include lovelace/tabs/baby.yaml 
+  
+     
+
+  - icon: mdi:test-tube
+    id: experimental
+    title: Experimental
+    cards:
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: entities
+            title: My Title
+            entities:
+              - entity: sensor.plant_moisture_00
+          - type: custom:mini-graph-card
+            name: Vento
+            icon: mdi:weather-windy
+            entities:
+              - entity: sensor.wind_2 
+            points_per_hour: 12
+            line_width: 2
+            show:
+              extrema: true

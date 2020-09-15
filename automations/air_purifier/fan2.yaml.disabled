@@ -1,0 +1,21 @@
+- id: '1581365072094'
+  alias: Air Purifier - mode fan2
+  description: ''
+  trigger:
+  - above: '2'
+    below: '4'
+    entity_id: sensor.air_mode
+    platform: numeric_state
+  - above: '1'
+    below: '3'
+    entity_id: sensor.air_fan
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: sensor.air_mode
+    state: 'true'
+  action:
+  - data:
+      option: medio
+    entity_id: input_select.air_purifier_mode
+    service: input_select.select_option

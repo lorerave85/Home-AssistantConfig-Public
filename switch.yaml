@@ -1,0 +1,10 @@
+- platform: rpi_gpio
+  ports:
+    18: RelePompa1
+    23: RelePompa2
+    25: ReleImpiantoEsterno
+
+- platform: broadlink
+  host: 192.168.1.6
+  mac: 24:df:a7:e8:88:51
+  type: rm4_mini

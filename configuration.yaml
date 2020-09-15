@@ -1,0 +1,146 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+homeassistant:
+  latitude: !secret latitude                                        
+  longitude: !secret longitude
+  elevation: !secret elevation
+  time_zone: !secret time_zone
+  external_url: !secret base_url_public
+  internal_url: !secret base_url_public
+  
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+    cache: true
+    service_name: google_say
+    language: 'it'
+
+group: !include groups.yaml
+automation: !include_dir_merge_list automations
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include sensors.yaml
+panel_custom: !include panel_custom.yaml
+input_boolean: !include input_boolean.yaml
+input_select: !include input_select.yaml
+input_number: !include input_number.yaml
+timer: !include timer.yaml
+cover: !include cover.yaml
+logger: !include logger.yaml
+rest_command: !include rest_command.yaml
+telegram_bot: !include telegram_bot.yaml
+switch: !include switch.yaml
+plant: !include plant.yaml
+#packages: !include_dir_named packages
+
+frontend:
+  themes: !include_dir_merge_named  themes/
+
+lovelace:
+  mode: yaml
+
+# duck DNS
+http:
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+#weather:
+#  - platform: darksky
+#    api_key: !secret darksky_api
+#    mode: daily
+
+vacuum:
+  - platform: xiaomi_miio
+    host: !secret xiaomi_vacuum_ip
+    token: !secret xiaomi_vacuum_token 
+    name: aspirapolvere
+
+fan:
+  - platform: xiaomi_miio
+    host: !secret xiaomi_miio_ip
+    token: !secret xiaomi_miio_token
+    model: zhimi.airpurifier.mb3
+    name: Air Purifier
+
+#ffmpeg:
+#  ffmpeg_bin: /usr/bin/ffmpeg
+#camera:
+#  - platform: ffmpeg
+#    name: camera
+#    input: http://192.168.1.14:8090/camera.mjpeg
+
+alarm_control_panel:
+  - platform: manual
+    name: Allarme
+    code: 1234
+    arming_time: 10
+    delay_time: 20
+    trigger_time: 4
+    disarmed:
+      trigger_time: 0
+    armed_home:
+      arming_time: 0
+      delay_time: 0
+
+google_assistant:
+  project_id: home-assistant-268211
+  service_account: !include home-assistant-268211-f4b9012c2bd5.json
+  exposed_domains:
+    - scene
+    - script
+
+notify:
+  - name: lorenzo
+    platform: telegram
+    chat_id: !secret telegram_id_lorenzo
+  - name: luana
+    platform: telegram
+    chat_id: !secret telegram_id_luana
+  - name: famiglia
+    platform: group
+    services:
+      - service: lorenzo
+      - service: luana
+
+#remote:
+#  - platform: broadlink
+#    host: !secret broadlink_ip
+#    mac: !secret broadlink
+#    type: rm4_mini
+
+climate:
+  - platform: smartir
+    name: Condizionatore Salotto
+    controller_data: !secret broadlink_ip
+    device_code: !secret device_code
+
+
+#camera:
+#  - platform: generic
+#    name: Airport
+#    still_image_url: http://127.0.0.1:8080/
+#    verify_ssl: false
+#    #content_type: <See camera component Generic Camera>
+#
+
+
+# TUTTO OK      
+modbus:
+  name: hub1
+  type: serial
+  method: rtu
+  #port: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_00000000-if00-port0
+  port: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+  #port: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
+  baudrate: 4800
+  stopbits: 1
+  bytesize: 8
+  parity: N
+
+
+#i2c:
+#  sda: 3
+#  scl: 5
+#  scan: True
+

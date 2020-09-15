@@ -1,0 +1,14 @@
+- id: '1259164417484899'
+  alias: Tocco faccia 3 - lampada turca
+  trigger:
+  - device_id: 7d740dfd7d6345caaf55cc19322008bb
+    domain: deconz
+    platform: device
+    subtype: side_3
+    type: remote_double_tap
+  condition: []
+  action:
+  - data:
+      option: lampada_turca
+    entity_id: input_select.cube_mode
+    service: input_select.select_option

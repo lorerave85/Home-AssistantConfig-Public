@@ -1,0 +1,120 @@
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+
+- platform: mitemp_bt
+  name: "sensor camera"
+  mac: !secret sensor_temperature_mac_camera
+  force_update: false
+  median: 3
+  monitored_conditions:
+    - temperature
+    - humidity
+    - battery
+
+- platform: mitemp_bt
+  name: "sensor ludovica"
+  mac: !secret sensor_temperature_mac_ludovica
+  force_update: false
+  median: 3
+  monitored_conditions:
+    - temperature
+    - humidity
+    - battery
+
+- platform: mitemp_bt
+  name: "sensor bagno"
+  mac: !secret sensor_temperature_mac_bagno
+  force_update: false
+  median: 3
+  monitored_conditions:
+    - temperature
+    - humidity
+    - battery
+
+- platform: mitemp_bt
+  name: "sensor cucina"
+  mac: !secret sensor_temperature_mac_cucina
+  force_update: false
+  median: 3
+  monitored_conditions:
+    - temperature
+    - humidity
+    - battery
+
+- platform: command_line
+  name: "RaspCPU"
+  command: 'cat /sys/class/thermal/thermal_zone0/temp'
+  unit_of_measurement: '°C'
+  value_template: '{{ value | multiply(0.001) | round(1)}}'
+
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
+    - type: processor_use
+
+- platform: modbus
+  scan_interval: 1
+  registers:
+    - name: wind_1
+      hub: hub1
+      unit_of_measurement: m/s
+      slave: 1
+      register_type: input
+      register: 0
+      scale: 0.1
+      data_type: int
+    - name: wind_2
+      hub: hub1
+      unit_of_measurement: Km/h
+      slave: 1
+      register_type: input
+      register: 0
+      scale: 0.36
+      data_type: int
+
+        
+#- platform: ina219
+#    address: 0x40
+#    shunt_resistance: 0.1 ohm
+#    current:
+#      name: "Solar Current"
+#      accuracy_decimals: 3
+#      filters:
+#       - multiply: 120
+#    power:
+#      name: "Solar Power"
+#      filters:
+#       - multiply: 120
+#    bus_voltage:
+#      name: "Bus Voltage"
+#      accuracy_decimals: 3
+#    shunt_voltage:
+#      name: "Shunt Voltage"
+#      filters:
+#      - multiply: 120
+#      accuracy_decimals: 3
+#    max_voltage: 32.0V
+#    max_current: 3.2A
+#    update_interval: 1s
+
+- platform: mqtt
+  name: plant_moisture_00
+  state_topic: home/flower
+  value_template: '{{ value_json.ch0 | int }}'
+  unit_of_measurement: '%'
+
+- platform: mqtt
+  name: plant_moisture_01
+  state_topic: home/flower
+  value_template: '{{ value_json.ch1 | int }}'
+  unit_of_measurement: '%'
+
+- platform: mqtt
+  name: power_line
+  state_topic: home/power
+  value_template: '{{ value_json.power_line }}'
+  unit_of_measurement: 'W'

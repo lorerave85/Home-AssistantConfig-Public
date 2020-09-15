@@ -1,0 +1,15 @@
+# Locate: /etc/systemd/system
+
+
+[Unit]
+Description=Analogic loop
+After=docker.service hassio-supervisor.service
+
+[Service]
+User=pi
+Group=pi
+Type=simple
+ExecStart=/etc/systemd/system/loop_analog.sh
+
+[Install]
+WantedBy=multi-user.target

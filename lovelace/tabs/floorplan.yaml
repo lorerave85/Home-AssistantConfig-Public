@@ -1,0 +1,224 @@
+---
+icon: 'mdi:floor-plan'
+title: Floorplan 
+panel: true 
+cards:
+  - config:
+      image: /local/custom_ui/floorplan/casa.svg
+
+      rules:
+        - name: Sensors_wind
+          entities:
+            -  sensor.wind_2
+          text_template: '${entity.state ? entity.state : "--"}'
+          class_template: 'return "static-temp";'
+
+        - name: Sensors_pm25
+          entities:
+            -  fan.air_purifier
+          text_template: '${entity.attributes.aqi ? entity.attributes.aqi : "--"}'
+          class_template: 'return "static-temp";'
+
+        #- name: Sensors_temp
+        #  entities:
+        #    -  sensor.sensor_camera_temperature
+        #    -  sensor.sensor_ludovica_temperature
+        #    -  sensor.sensor_bagno_temperature
+        #    -  sensor.temperature_7
+        #    -  sensor.sensor_cucina_temperature
+        #    -  sensor.weather_temperature
+        #    -  sensor.temperature_5
+        #    -  sensor.temperature_10
+        #  text_template: '${entity.state}'
+        #  class_template: 'return "static-temp";'
+#
+        #- name: Sensors_temp_ext
+        #  entities:
+        #    -  sensor.external_temperature
+        #  text_template: '${entity.state}'
+        #  class_template: 'return "static-temp";'
+        #
+        #- name: Sensors_hum
+        #  entities:
+        #    -  sensor.sensor_camera_humidity
+        #    -  sensor.sensor_ludovica_humidity
+        #    -  sensor.sensor_bagno_humidity
+        #    -  sensor.humidity_8
+        #    -  sensor.sensor_cucina_humidity
+        #    -  sensor.weather_humidity
+        #    -  sensor.humidity_3 
+        #    -  sensor.humidity_11
+        #  text_template: '${entity.state}'
+        #  class_template: 'return "static-temp";'
+#
+        #- name: Sensors_hum_ext
+        #  entities:
+        #    -  sensor.external_humidity
+        #  text_template: '${entity.state}'
+        #  class_template: 'return "static-temp";'
+#
+        #- name: Sensors_pressure
+        #  entities:
+        #    -  sensor.pressure_4
+        #  text_template: '${entity.state}'
+        #  class_template: 'return "static-temp";'
+
+        - name: text_font_date
+          entities:
+            - sensor.date
+          text_template: '${entity.state ? entity.state : "undefined"}'
+          class_template: 'return "static-text-date";'
+
+        - name: text_font_time
+          entities:
+            - sensor.time
+          text_template: '${entity.state ? entity.state : "undefined"}'
+          class_template: 'return "static-text-time";'
+#
+        #- name: windows_cucina_status
+        #  entities:
+        #    - binary_sensor.openclose_16
+        #  text_template: '${entity.state ? entity.state : "undefined"}'
+        #  class_template: '
+        #  if (entity.state=="on")
+        #    return "window-open";
+        #  else 
+        #    return "window-close";
+        #  '
+#
+        #- name: windows_soggiorno_status
+        #  entities:
+        #    - binary_sensor.openclose_14
+        #  text_template: '${entity.state ? entity.state : "undefined"}'
+        #  class_template: '
+        #  if (entity.state=="on")
+        #    return "window-open";
+        #  else 
+        #    return "window-close";
+        #  '
+#
+        #- name: windows_soggiorno_piccola_status
+        #  entities:
+        #    - binary_sensor.openclose_19
+        #  text_template: '${entity.state ? entity.state : "undefined"}'
+        #  class_template: '
+        #  if (entity.state=="on")
+        #    return "window-open";
+        #  else 
+        #    return "window-close";
+        #  '
+#
+        - name: windows_ludovica_status
+          entities:
+            - binary_sensor.openclose_15
+          text_template: '${entity.state ? entity.state : "undefined"}'
+          class_template: '
+          if (entity.state=="on")
+            return "window-open";
+          else 
+            return "window-close";
+          '
+#
+        #- name: windows_camera_status
+        #  entities:
+        #    - binary_sensor.openclose_17
+        #  text_template: '${entity.state ? entity.state : "undefined"}'
+        #  class_template: '
+        #  if (entity.state=="on")
+        #    return "window-open";
+        #  else 
+        #    return "window-close";
+        #  '
+#
+        #- name: windows_bagno_status
+        #  entities:
+        #    - binary_sensor.openclose_18
+        #  text_template: '${entity.state ? entity.state : "undefined"}'
+        #  class_template: '
+        #  if (entity.state=="on")
+        #    return "window-open";
+        #  else 
+        #    return "window-close";
+        #  '
+#
+        #- name: Exit_port_Sensors
+        #  entities:
+        #    - binary_sensor.openclose_6
+        #  image_template: '
+        #    var imageName = "";
+        #    switch (entity.state) {
+        #      case "on":
+        #        imageName = "patioDoorOpen";
+        #        break;
+        #      case "off":
+        #        imageName = "patioDoorClosed";
+        #        break;
+        #      }
+        #    return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
+        #    '
+#
+        - name: Alarm
+          entities:
+            - alarm_control_panel.allarme
+          image_template: '
+            var imageName = "";
+            switch (entity.state) {
+              case "disarmed":
+                imageName = "shield_off";
+                break;
+              case "armed_away":
+                imageName = "shield_on";
+                break;
+              case "pending":
+                imageName = "shield_working";
+                break;
+              }
+            return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
+            '
+
+        - name: Vacuum
+          entities:
+            - vacuum.aspirapolvere
+          image_template: '
+            var imageName = "";
+            switch (entity.state) {
+              case "cleaning":
+                imageName = "robot-vacuum-cleaner_run";
+                break;
+              case "docked":
+                imageName = "robot-vacuum-cleaner_dock";
+                break;
+              case "idle":
+                imageName = "robot-vacuum-cleaner_stop";
+                break;
+              case "returning":
+                imageName = "robot-vacuum-cleaner_return";
+                break;
+              }
+            return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
+            '
+#
+        #- name: Light
+        #  entities:
+        #    - switch.on_off_plug_in_unit_12
+        #    - light.color_temperature_light_ikea
+        #    - light.aqara_01
+        #    - light.aqara_02
+        #    - light.aqara_03
+        #  image_template: '
+        #    var imageName = "";
+        #    switch (entity.state) {
+        #      case "on":
+        #        imageName = "lightON";
+        #        break;
+        #      case "off":
+        #        imageName = "lightOFF";
+        #        break;
+        #      }
+        #    return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
+        #    '
+
+      stylesheet: /local/custom_ui/floorplan/casa.css
+    title: Floorplan
+    type: 'custom:floorplan-card'
+  

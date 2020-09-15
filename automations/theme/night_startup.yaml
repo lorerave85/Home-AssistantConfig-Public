@@ -1,0 +1,12 @@
+- id: 01e7815587dc4db9aef813e11850fa42
+  alias: Set Night Theme at startup
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - after: sunset
+    condition: sun
+  action:
+  - data:
+      name: slate
+    service: frontend.set_theme

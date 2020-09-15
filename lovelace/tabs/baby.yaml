@@ -1,0 +1,148 @@
+---
+icon: mdi:baby-carriage
+title: Baby
+cards:
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Cane 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:dog'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Gatto 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:cat'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Elefante 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:elephant'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Uccellino 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:twitter'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Ape 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:bee'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Maiale 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:pig'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Cavallo 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:chess-knight'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Acqua 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:water'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Papà e Ludovica 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:human-male-girl'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Mamma e Ludovica 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:human-female-girl'  
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Ludovica guarda che le prendi
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:hand'  
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Ludovica chiamo il robot
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:robot-vacuum'  
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Mucca 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:cow'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Ludovica andiamo a lavarci le mani 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:hand-water'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Palla 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:basketball'
+- type: 'custom:button-card'
+  size: 30%
+  tap_action:
+    service: tts.google_say
+    action: call-service
+    service_data:
+      message: Albero 
+      entity_id: media_player.googlehome_soggiorno
+  icon: 'mdi:tree'

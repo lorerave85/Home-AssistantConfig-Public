@@ -1,0 +1,30 @@
+---
+icon: mdi:flower-tulip
+title: Piante
+cards:
+- type: glance
+  show_name: true
+  show_state: true
+  entities:
+    - entity: sensor.plants_moisture_0
+    - entity: sensor.plants_moisture_1
+    - entity: sensor.plants_moisture_2
+    - entity: sensor.plants_moisture_3
+    - entity: sensor.plants_moisture_4
+
+- type: button
+  tap_action:
+    action: toggle
+  name: Pompa 1
+  entity: switch.relepompa1
+  icon: 'mdi:water-pump'
+
+- type: button
+  tap_action:
+    action: toggle
+  name: Pompa 2
+  entity: switch.relepompa2
+  icon: 'mdi:water-pump'
+
+
+

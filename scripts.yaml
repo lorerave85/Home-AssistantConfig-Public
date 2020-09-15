@@ -1,0 +1,78 @@
+'1584799786794':
+  alias: Avvia sniffer 433Mhz
+  sequence:
+  - data: {}
+    service: rest_command.start_433mhz_sniffer
+'1584799786795':
+  alias: Ferma sniffer 433Mhz
+  sequence:
+  - data: {}
+    service: rest_command.stop_433mhz_sniffer
+'1584799787794':
+  alias: Avvia sniffer 1090Mhz
+  sequence:
+  - data: {}
+    service: rest_command.start_1090mhz_sniffer
+'1584799788795':
+  alias: Ferma sniffer 1090Mhz
+  sequence:
+  - data: {}
+    service: rest_command.stop_1090mhz_sniffer
+'1584799786796':
+  alias: Spegni raspberry
+  sequence:
+  - data: {}
+    service: rest_command.shutdown_raspberry
+'1584799786797':
+  alias: Che temperatura c è fuori
+  sequence:
+  - service: tts.google_say
+    entity_id: media_player.soggiorno
+    data_template:
+      message: La temperatura esterna è di {{states('sensor.external_temperature')}}
+        gradi
+
+## DEMUX 00 -> 0001
+#'1595266082013':
+#  alias: Pompa1OFF-Pompa2OFF
+#  sequence:
+#  - data: {}
+#    entity_id: switch.pin18
+#    service: switch.turn_off
+#  - data: {}
+#    entity_id: switch.pin23
+#    service: switch.turn_off
+#
+## DEMUX 10 -> 0010
+#'1595266082014':
+#  alias: Pompa1ON-Pompa2OFF
+#  sequence:
+#  - data: {}
+#    entity_id: switch.pin18
+#    service: switch.turn_on
+#  - data: {}
+#    entity_id: switch.pin23
+#    service: switch.turn_off
+#
+## DEMUX 01 -> 0100
+#'1595266082015':
+#  alias: Pompa1OFF-Pompa2ON
+#  sequence:
+#  - data: {}
+#    entity_id: switch.pin18
+#    service: switch.turn_off
+#  - data: {}
+#    entity_id: switch.pin23
+#    service: switch.turn_on
+#
+## DEMUX 11 -> 1000
+#'1595266082016':
+#  alias: Pompa1ON-Pompa2ON
+#  sequence:
+#  - data: {}
+#    entity_id: switch.pin18
+#    service: switch.turn_on
+#  - data: {}
+#    entity_id: switch.pin23
+#    service: switch.turn_on
+#

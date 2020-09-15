@@ -1,0 +1,37 @@
+- id: '15815400381976'
+  alias: Aperta Portafinestra Soggiorno
+  trigger:
+    entity_id: binary_sensor.openclose_14
+    from: 'off'
+    platform: state
+    to: 'on'
+    for:
+      seconds: 1
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.allarme
+    state: armed_away
+  action:
+    service: notify.famiglia
+    data:
+      message: Rilevata apertura portafinestra soggiorno
+      title: Domotica - finestre
+
+- id: '15815400381971236'
+  alias: Aperta Finestra Soggiorno
+  trigger:
+    entity_id: binary_sensor.openclose_19
+    from: 'off'
+    platform: state
+    to: 'on'
+    for:
+      seconds: 1
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.allarme
+    state: armed_away
+  action:
+    service: notify.famiglia
+    data:
+      message: Rilevata apertura finestra soggiorno
+      title: Domotica - finestre

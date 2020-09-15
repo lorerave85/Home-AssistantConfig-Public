@@ -1,0 +1,18 @@
+- id: '15815400381979'
+  alias: Aperta Porta
+  trigger:
+    entity_id: binary_sensor.openclose_6
+    from: 'off'
+    platform: state
+    to: 'on'
+    for:
+      seconds: 1
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.allarme
+    state: armed_away
+  action:
+    service: notify.famiglia
+    data:
+      message: Rilevata apertura porta
+      title: Domotica - Porta

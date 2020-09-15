@@ -1,0 +1,107 @@
+{
+  "nodes": {
+    "348f540f_3e54cc": {
+      "lastPayload": {
+        "state": "prova",
+        "attributes": {
+          "pm25": "10"
+        }
+      }
+    },
+    "1ff1f4b4_a3820b": {
+      "lastPayload": {
+        "state": {
+          "mode": {
+            "did": "270214618",
+            "siid": 2,
+            "piid": 5,
+            "code": 0,
+            "value": 0
+          },
+          "filter1_life": {
+            "did": "270214618",
+            "siid": 4,
+            "piid": 3,
+            "code": 0,
+            "value": 96
+          },
+          "aqi": {
+            "did": "270214618",
+            "siid": 3,
+            "piid": 6,
+            "code": 0,
+            "value": 18
+          },
+          "child_lock": {
+            "did": "270214618",
+            "siid": 7,
+            "piid": 1,
+            "code": 0,
+            "value": false
+          },
+          "power": {
+            "did": "270214618",
+            "siid": 2,
+            "piid": 2,
+            "code": 0,
+            "value": true
+          },
+          "temperature": {
+            "did": "270214618",
+            "siid": 3,
+            "piid": 8,
+            "code": 0,
+            "value": 19.5
+          },
+          "humidity": {
+            "did": "270214618",
+            "siid": 3,
+            "piid": 7,
+            "code": 0,
+            "value": 49
+          },
+          "fan": {
+            "did": "270214618",
+            "siid": 2,
+            "piid": 4,
+            "code": 0,
+            "value": 1
+          },
+          "buzzer": {
+            "did": "270214618",
+            "siid": 5,
+            "piid": 1,
+            "code": 0,
+            "value": false
+          },
+          "led_brightness": {
+            "did": "270214618",
+            "siid": 6,
+            "piid": 1,
+            "code": 0,
+            "value": 1
+          }
+        },
+        "attributes": {}
+      }
+    },
+    "d57183be_051d3": {
+      "lastPayload": {
+        "state": 26.1,
+        "attributes": {}
+      }
+    },
+    "e50daffa_7742c": {
+      "lastPayload": {
+        "state": 49,
+        "attributes": {}
+      }
+    },
+    "c2ac200e_2aa3e": {
+      "lastPayload": {
+        "state": "2020-09-15T12:08:37.000Z",
+        "attributes": {}
+      }
+    }
+  }
+}

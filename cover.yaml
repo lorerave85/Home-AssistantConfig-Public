@@ -1,0 +1,87 @@
+- platform: template
+  covers:
+  
+    kitchen_window_cover:
+      device_class: blind
+      friendly_name: "kitchen Window Cover"
+      position_template: 50
+      open_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.kitchen_open_status
+      close_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.kitchen_close_status
+      stop_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.kitchen_stop_status
+
+    livingroom_window_cover:
+      device_class: blind
+      friendly_name: "Living Room Window Cover"
+      position_template: 50
+      open_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.livingroom_open_status
+      close_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.livingroom_close_status
+      stop_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.livingroom_stop_status
+
+    bedroom_window_cover:
+      device_class: blind
+      friendly_name: "Bed Room Window Cover"
+      position_template: 50
+      open_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.bedroom_open_status
+      close_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.bedroom_close_status
+      stop_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.bedroom_stop_status
+
+    balcony_blind:
+      device_class: blind
+      friendly_name: "Balcony Blind"
+      position_template: 50
+      open_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.balcony_open_status
+      close_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.balcony_close_status
+      stop_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.balcony_stop_status
+
+    ludovica_blind:
+      device_class: blind
+      friendly_name: "Ludovica Blind"
+      position_template: 50
+      open_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.ludovica_open_status
+      close_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.ludovica_close_status
+      stop_cover:
+        service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.ludovica_stop_status

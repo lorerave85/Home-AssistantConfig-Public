@@ -1,0 +1,36 @@
+- id: '15925751166816654'
+  alias: Innaffiare ON
+  description: ''
+  trigger:
+  - below: '20'
+    entity_id: sensor.plants_moisture_0
+    for: '2'
+    platform: numeric_state
+  condition:
+  - after: sunset
+    after_offset: '1'
+    condition: sun
+  action:
+  - data: {}
+    entity_id: switch.relepompa1
+    service: switch.turn_on
+  - data: {}
+    service: rest_command.start_loop_analogic
+
+
+
+- id: '15925751166816655'
+  alias: Innaffiare OFF
+  description: ''
+  trigger:
+  - above: '20'
+    entity_id: sensor.plants_moisture_0
+    for: '2'
+    platform: numeric_state
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.relepompa1
+    service: switch.turn_off
+  - data: {}
+    service: rest_command.stop_loop_analogic

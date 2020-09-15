@@ -1,0 +1,18 @@
+- id: '15815400381978'
+  alias: Aperta Finestra Camera
+  trigger:
+    entity_id: binary_sensor.openclose_17
+    from: 'off'
+    platform: state
+    to: 'on'
+    for:
+      seconds: 1
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.allarme
+    state: armed_away
+  action:
+    service: notify.famiglia
+    data:
+      message: Rilevata apertura finestra camera
+      title: Domotica - finestre
