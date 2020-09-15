@@ -1,4 +1,12 @@
 # Home-AssistantConfig
+
+![Alt text](/show_images/home.png?raw=true "Optional Title")
+![Alt text](/show_images/floorplan.png?raw=true "Optional Title")
+![Alt text](/show_images/sensor.png?raw=true "Optional Title")
+![Alt text](/show_images/baby.png?raw=true "Optional Title")
+![Alt text](/show_images/maintenance.png?raw=true "Optional Title")
+
+
 ## Indice
 * [Installation Home Assistant](#Installation-Home-Assistant)
 * [Addons base](#Addons-base)
@@ -140,7 +148,6 @@ require_certificate: false
 ```yaml
 device: >-
   /dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2147218-if00
-vnc_password: aaaa
 ```
 
 Backup DB
