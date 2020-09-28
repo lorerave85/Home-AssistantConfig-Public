@@ -1,0 +1,29 @@
+---
+icon: mdi:tablet-cellphone
+title: Mobile Device
+cards:
+- type: custom:vertical-stack-in-card
+  title: One Plus8pro
+  cards:
+    - type: entities
+      entities:
+      - entity: sensor.in2023_contapassi
+      - entity: sensor.in2023_livello_della_batteria
+      - entity: sensor.in2023_modalita_suoneria
+      - entity: sensor.in2023_sensore_di_luce
+      - entity: sensor.in2023_sensore_non_disturbare
+
+- type: custom:vertical-stack-in-card
+  title: Huawei P30pro
+  cards:
+    - type: entities
+      entities:
+      - entity: sensor.vog_l29_contapassi
+      - entity: sensor.vog_l29_battery_level
+      - entity: sensor.vog_l29_modalita_audio
+      - entity: sensor.vog_l29_sensore_di_luce
+      - entity: sensor.vog_l29_sensore_non_disturbare
+
+
+
+

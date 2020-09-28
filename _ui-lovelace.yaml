@@ -1,0 +1,168 @@
+title: MrNight House
+icon: mdi:home-city-outline
+#background: center / cover no-repeat url("/local/backgrounds/background-15.gif") fixed 
+resources:
+  - url: /local/custom_ui/lib/battery-entity.js?v=1
+    type: module
+  - url: /local/custom_ui/lib/vertical-stack-in-card.js?v=0.3.3
+    type: js
+  - url: /local/custom_ui/lib/auto-entities.js
+    type: module
+  - url: /local/custom_ui/lib/button-card.js
+    type: module
+  - url: /local/custom_ui/lib/mini-graph-card-bundle.js?v=0.9.2
+    type: module
+  - url: /local/custom_ui/lib/air-filter-card.js
+    type: module
+  - url: /local/custom_ui/lib/xiaomi-vacuum-card.js?v=3.0.1
+    type: module
+  - url: /local/custom_ui/lib/mini-media-player-bundle.js?v=1.9.1
+    type: module
+  - url: /local/custom_ui/lib/bar-card.js
+    type: module
+  - url: /local/custom_ui/lib/slider-entity-row.js
+    type: module
+  - type: module
+    url: /local/floorplan/floorplan-card.js?v=1.1.14
+    
+
+views:
+  - !include lovelace/tabs/home.yaml
+  - !include lovelace/tabs/environment.yaml
+  - !include lovelace/tabs/light.yaml
+  #- !include lovelace/tabs/airpurifier.yaml
+  - !include lovelace/tabs/covers.yaml
+  - !include lovelace/tabs/automation.yaml
+  - !include lovelace/tabs/battery.yaml
+  - !include lovelace/tabs/maintenance.yaml
+  - !include lovelace/tabs/alarm.yaml
+  #- !include lovelace/tabs/cam.yaml
+  - !include lovelace/tabs/floorplan.yaml
+  - !include lovelace/tabs/mobile-device.yaml
+  # !include lovelace/tabs/plant.yaml
+  #- !include lovelace/tabs/coronavirus.yaml 
+  - !include lovelace/tabs/baby.yaml 
+  
+     
+
+  - icon: mdi:test-tube
+    id: experimental
+    title: Experimental
+    #panel: true
+    cards:
+      #- type: custom:vertical-stack-in-card
+      #  cards:
+      #    - type: button
+      #      tap_action:
+      #        action: toggle
+      #      hold_action:
+      #        action: more-info
+      #      show_icon: true
+      #      show_name: false
+      #      entity: input_boolean.climate_timer_status
+      #      icon: 'mdi:desk-lamp'
+      #    - type: custom:slider-entity-row
+      #      entity: input_number.climate_timer
+
+
+      - type: 'custom:floorplan-card'
+        config:
+          image: /local/custom_ui/floorplan/casa.svg
+          
+          rules:
+
+            #- name: text_font_datetime
+            #  entities:
+            #    - sensor.date
+            #    - sensor.time
+            #  text_template: '${entity.state ? entity.state : "undefined"}'
+            #  class_template: 'return "static-text";'
+            
+            - name: Sensors_hum
+              entities:
+                -  sensor.sensor_bagno_humidity
+                -  sensor.sensor_bagno_temperature
+              text_template: '${entity.state != "unknown" ? entity.state : "--"}'
+              class_template: 'return "static-text";'
+
+            
+
+            
+          stylesheet: /local/custom_ui/floorplan/casa.css
+    
+  
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            name: Vento
+            icon: mdi:weather-windy
+            entities:
+              - entity: sensor.power_line
+            points_per_hour: 60
+            #upper_bound: 4000
+            line_width: 2
+            hours_to_show: 6
+            show:
+              extrema: true
+    #  title: Tende
+    #  cards:
+    #    entities:
+    #      - entity: sensor.in2023_contapassi
+      #- entity: sensor.octoprint_job_percentage
+      #  type: "custom:bar-card"
+      #  positions:
+      #    icon: "off"
+      #    indicator: inside
+      #- entities:
+      #    - entity: sensor.octoprint_time_elapsed
+      #    - entity: sensor.octoprint_time_remaining
+      #  show_header_toggle: false
+      #  type: entities
+     #
+      #- card:
+      #    decimals: 1
+      #    entities:
+      #      - entity: sensor.octoprint_actual_tool0_temp
+      #        name: Nozzle
+      #        show_state: true
+      #      - entity: sensor.octoprint_actual_bed_temp
+      #        name: Bed
+      #        show_state: true
+      #    hours_to_show: 1
+      #    name: Temperature
+      #    points_per_hour: 120
+      #    type: "custom:mini-graph-card"
+      #  conditions:
+      #    - entity: sensor.octoprint_current_state
+      #      state_not: "off"
+      #    - entity: sensor.octoprint_current_state
+      #      state_not: unavailable
+      #  type: conditional
+#
+    #
+      #- type: custom:mini-graph-card
+      #  name: Filament Box Humidity / Temp
+      #  icon: mdi:water-percent
+      #  entities:
+      #    - entity: sensor.sensor_ludovica_temperature
+      #      name: Box Humidity
+      #    - entity: sensor.sensor_ludovica_humidity
+      #      name: Box Temp
+      #      color: gray
+      #      y_axis: secondary
+      #  color_thresholds:
+      #    - value: 18
+      #      color: green
+      #    - value: 22
+      #      color: orange
+      #    - value: 100
+      #      color: red
+      #  show:
+      #    labels: true
+      #    legend: true
+      #    labels_secondary: true
+#
+      
+        
+        
+    

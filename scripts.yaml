@@ -18,6 +18,16 @@
   sequence:
   - data: {}
     service: rest_command.stop_1090mhz_sniffer
+'1584799787796':
+  alias: Avvia loop INA219
+  sequence:
+  - data: {}
+    service: rest_command.start_loop_ina219
+'1584799788797':
+  alias: Ferma loop INA219
+  sequence:
+  - data: {}
+    service: rest_command.stop_loop_ina219
 '1584799786796':
   alias: Spegni raspberry
   sequence:
@@ -31,6 +41,7 @@
     data_template:
       message: La temperatura esterna è di {{states('sensor.external_temperature')}}
         gradi
+
 
 ## DEMUX 00 -> 0001
 #'1595266082013':

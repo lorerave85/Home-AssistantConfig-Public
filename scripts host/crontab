@@ -1,4 +1,5 @@
 # Locate: contab
 
 
-0 * * * * /usr/bin/python3 /home/pi/plant_moisture_detector.py | mosquitto_pub -u mqtt -P lorenzo -t home/flower -l
+*/1 * * * * /usr/bin/python3 /home/pi/plant_moisture_detector.py | mosquitto_pub -u mqtt -P lorenzo -t home/flower -l
+*/1 * * * * /usr/bin/python3.7 /home/pi/ina.py | mosquitto_pub -u mqtt -P lorenzo -t home/power_pi -l

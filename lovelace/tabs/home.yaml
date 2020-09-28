@@ -62,8 +62,12 @@ cards:
   icon: mdi:flash
   entities:
     - entity: sensor.power_line
+  points_per_hour: 60
+  #upper_bound: 4000
+  line_width: 2
+  hours_to_show: 6
   show:
-    graph: bar
+    extrema: true
 
 - type: thermostat
   entity: climate.condizionatore_salotto

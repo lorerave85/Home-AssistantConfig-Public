@@ -10,18 +10,20 @@ resources:
     type: module
   - url: /local/custom_ui/lib/button-card.js
     type: module
-  - url: /local/custom_ui/lib/floorplan-card.js
-    type: module
   - url: /local/custom_ui/lib/mini-graph-card-bundle.js?v=0.9.2
     type: module
-  #- url: /local/custom_ui/lib/tempometer-gauge-card.js
-  #  type: js
   - url: /local/custom_ui/lib/air-filter-card.js
     type: module
   - url: /local/custom_ui/lib/xiaomi-vacuum-card.js?v=3.0.1
     type: module
   - url: /local/custom_ui/lib/mini-media-player-bundle.js?v=1.9.1
     type: module
+  - url: /local/custom_ui/lib/bar-card.js
+    type: module
+  - url: /local/custom_ui/lib/slider-entity-row.js
+    type: module
+  - type: module
+    url: /local/floorplan/floorplan-card.js?v=1.1.14
     
 
 views:
@@ -36,6 +38,7 @@ views:
   - !include lovelace/tabs/alarm.yaml
   #- !include lovelace/tabs/cam.yaml
   - !include lovelace/tabs/floorplan.yaml
+  - !include lovelace/tabs/mobile-device.yaml
   # !include lovelace/tabs/plant.yaml
   #- !include lovelace/tabs/coronavirus.yaml 
   - !include lovelace/tabs/baby.yaml 
@@ -45,19 +48,18 @@ views:
   - icon: mdi:test-tube
     id: experimental
     title: Experimental
+    #panel: true
     cards:
-      - type: custom:vertical-stack-in-card
-        cards:
-          - type: entities
-            title: My Title
-            entities:
-              - entity: sensor.plant_moisture_00
-          - type: custom:mini-graph-card
-            name: Vento
-            icon: mdi:weather-windy
-            entities:
-              - entity: sensor.wind_2 
-            points_per_hour: 12
-            line_width: 2
-            show:
-              extrema: true
+      - type: glance
+        entities:
+        - entity: switch.alimentazioneesterna
+          name: Alimentazione esterna 12V
+          icon: 'mdi:flash'
+          show_state: false
+          tap_action:
+            action: toggle
+        
+
+
+      
+    

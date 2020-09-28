@@ -118,3 +118,31 @@
   state_topic: home/power
   value_template: '{{ value_json.power_line }}'
   unit_of_measurement: 'W'
+
+- platform: mqtt
+  name: pi_bus_voltage
+  #device_class: battery
+  state_topic: home/power_pi
+  value_template: '{{ value_json.Bus_Voltage }}'
+  unit_of_measurement: 'V'
+
+- platform: mqtt
+  name: pi_bus_current
+  #device_class: current
+  state_topic: home/power_pi
+  value_template: '{{ "%.1f"%(value_json.Bus_Current) | float }}'
+  unit_of_measurement: 'mA'
+  
+- platform: mqtt
+  name: pi_power
+  #device_class: power
+  state_topic: home/power_pi
+  value_template: '{{ "%.3f"%(float(value_json.Power)/1000) }}'
+  unit_of_measurement: 'W'
+
+- platform: mqtt
+  name: pi_shunt_voltage
+  #device_class: battery
+  state_topic: home/power_pi
+  value_template: '{{ value_json.Shunt_voltage }}'
+  unit_of_measurement: 'mV'

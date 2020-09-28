@@ -84,7 +84,7 @@
 
         - name: Exit_port_Sensors
           entities:
-            - binary_sensor.openclose_6
+            - binary_sensor.openclose_13
           image_template: '
             var imageName = "";
             switch (entity.state) {
@@ -93,6 +93,22 @@
                 break;
               case "off":
                 imageName = "patioDoorClosed";
+                break;
+              }
+            return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
+            '
+
+        - name: Printer_3D
+          entities:
+            - binary_sensor.octoprint_printing
+          image_template: '
+            var imageName = "";
+            switch (entity.state) {
+              case "on":
+                imageName = "3DPrinterON";
+                break;
+              case "off":
+                imageName = "3DPrinterOFF";
                 break;
               }
             return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";

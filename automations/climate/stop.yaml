@@ -1,0 +1,27 @@
+- id: '16003734869888'
+  alias: Spegni clima temporizzato
+  description: ''
+  trigger:
+  - entity_id: input_boolean.climate_timer_status
+    #for: '10'
+    for: "{{ states('input_number.climate_timer')|int }}"
+    from: 'off'
+    platform: state
+    to: 'on'
+  #condition:
+  #- condition: state
+  #  entity_id: climate.condizionatore_salotto
+  #  state: cool
+  #- condition: or
+  #  conditions:
+  #  - condition: state
+  #    entity_id: climate.condizionatore_salotto
+  #    state: dry
+  action:
+  - data: {}
+    entity_id: climate.condizionatore_salotto
+    service: climate.turn_off
+  - data: {}
+    entity_id: input_boolean.climate_timer_status
+    service: input_boolean.turn_off
+  mode: single

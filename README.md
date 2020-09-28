@@ -106,7 +106,7 @@ init_commands: []
 workgroup: ''
 username: aaaaa
 password: bbbbb
-interface: wlan0
+interface: ''
 allow_hosts:
   - 192.168.1.0/16
 veto_files:
@@ -126,7 +126,7 @@ lets_encrypt:
   keyfile: privkey.pem
 token: aaaa-bbbb-cccc-dddd
 domains:
-  - mrnight-home.duckdns.org
+  - name-xxx.duckdns.org
 seconds: 300
 ```
 
@@ -250,6 +250,12 @@ cd Adafruit_Python_MCP3008
 sudo python setup.py install
 ```
 
+## INA219
+### Connessione tra Raspberry e INA
+TO DO
+
+
+
 ## API for host service
 ### Installiamo Apache e il modulo cgi
 ```bash
@@ -282,7 +288,7 @@ Require local
 ```
 abilitamo in visudo la possibilità di chiamare solo i servizi scelti
 ```bash
-www-data ALL=(ALL) NOPASSWD: /bin/systemctl * sniffer-433.service, /bin/systemctl * sniffer-1090.service, /bin/systemctl * loop_analog.service, /bin/systemctl poweroff
+www-data ALL=(ALL) NOPASSWD: /bin/systemctl * sniffer-433.service, /bin/systemctl * sniffer-1090.service, /bin/systemctl * loop_analog.service, /bin/systemctl * loop_ina219.service, /bin/systemctl poweroff
 ```
 
 

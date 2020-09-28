@@ -66,9 +66,10 @@ fan:
 #ffmpeg:
 #  ffmpeg_bin: /usr/bin/ffmpeg
 #camera:
-#  - platform: ffmpeg
-#    name: camera
-#    input: http://192.168.1.14:8090/camera.mjpeg
+#  - platform: mjpeg
+#    name: OctoPrint Longer 4PRO
+#    still_image_url: http://octoprint.local/webcam/?action=snapshot
+#    mjpeg_url: http://octoprint.local/webcam/?action=stream
 
 alarm_control_panel:
   - platform: manual
@@ -103,11 +104,12 @@ notify:
       - service: lorenzo
       - service: luana
 
-#remote:
-#  - platform: broadlink
-#    host: !secret broadlink_ip
-#    mac: !secret broadlink
-#    type: rm4_mini
+remote:
+  - platform: broadlink
+    host: !secret broadlink_ip
+    mac: !secret broadlink_mac
+    type: rm4_mini
+
 
 climate:
   - platform: smartir
@@ -116,13 +118,12 @@ climate:
     device_code: !secret device_code
 
 
-#camera:
-#  - platform: generic
-#    name: Airport
-#    still_image_url: http://127.0.0.1:8080/
-#    verify_ssl: false
-#    #content_type: <See camera component Generic Camera>
-#
+octoprint:
+  host: !secret octoprint_host
+  port: !secret octoprint_port
+  api_key: !secret octoprint_token
+  bed: true
+  number_of_tools: 1
 
 
 # TUTTO OK      
@@ -138,6 +139,10 @@ modbus:
   bytesize: 8
   parity: N
 
+device_tracker:
+  - platform: ping
+    hosts:
+      hostone: !secret hostone_ip
 
 #i2c:
 #  sda: 3

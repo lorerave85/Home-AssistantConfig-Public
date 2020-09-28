@@ -57,3 +57,8 @@ ludovica_close_status:
 ludovica_stop_status:
   name: stato stop tenda ludovica 
   initial: off
+
+# avvio timer condizionatore
+climate_timer_status:
+  name: timer climatizzatore
+  initial: off

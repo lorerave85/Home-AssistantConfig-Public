@@ -57,8 +57,30 @@ cards:
         - entity: sensor.memory_use_percent
         - entity: sensor.disk_use_percent
 
+- type: custom:vertical-stack-in-card
+  title: Raspberry Energy monitor
+  cards:
+    - type: glance
+      show_name: true
+      show_name: true
+      entities:
+        - entity: sensor.pi_power
+          name: Power
+        - entity: sensor.pi_bus_voltage
+          name: BUS Voltage
+        - entity: sensor.pi_bus_current
+          name: BUS Current
+        - entity: sensor.pi_shunt_voltage
+          name: Shunt Voltage
 
-
-
-
+- type: custom:vertical-stack-in-card
+  title: Alimentazione esterna 12V
+  cards:
+    - type: glance
+      entities:
+      - entity: switch.alimentazioneesterna
+        icon: 'mdi:flash'
+        show_state: false
+        tap_action:
+          action: toggle
 

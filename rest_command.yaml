@@ -22,6 +22,14 @@
     url: http://localhost:8033/cgi-bin/stop_loop_analog.cgi
     method: GET
 
+  start_loop_ina219:
+    url: http://localhost:8033/cgi-bin/start_loop_ina219.cgi
+    method: GET
+
+  stop_loop_ina219:
+    url: http://localhost:8033/cgi-bin/stop_loop_ina219.cgi
+    method: GET
+
   shutdown_raspberry:
     url: http://localhost:8033/cgi-bin/shutdown.cgi
     method: GET

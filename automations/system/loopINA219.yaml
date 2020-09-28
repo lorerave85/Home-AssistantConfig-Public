@@ -1,0 +1,9 @@
+- id: a4195fe6aef200b69
+  alias: 'system loop INA219'
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - delay: 00:01:00
+    - service: rest_command.start_loop_ina219
+  
