@@ -305,7 +305,8 @@ Il ripristino può essere effettuato in pochi passaggi:
 
 3) Clonare repo nella folder /usr/share/hassio/homeassistant
 ```bash
-sudo git initsudo git remote add origin https://github.com/lorerave85/Home-AssistantConfig.git
+sudo git init
+sudo git remote add origin https://github.com/lorerave85/Home-AssistantConfig.git
 git fetch --all
 git reset --hard origin/master
 sudo git pull origin master

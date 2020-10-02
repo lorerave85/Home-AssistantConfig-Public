@@ -51,7 +51,7 @@
         service: input_boolean.turn_on
         data:
           entity_id: input_boolean.bedroom_stop_status
-
+     
     balcony_blind:
       device_class: blind
       friendly_name: "Balcony Blind"

@@ -62,7 +62,6 @@ cards:
   cards:
     - type: glance
       show_name: true
-      show_name: true
       entities:
         - entity: sensor.pi_power
           name: Power

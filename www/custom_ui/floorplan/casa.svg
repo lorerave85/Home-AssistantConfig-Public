@@ -14,7 +14,7 @@
    version="1.1"
    id="svg10129"
    sodipodi:docname="casa.svg"
-   inkscape:version="1.0 (4035a4f, 2020-05-01)">
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
   <defs
      id="defs10123" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.72805134"
-     inkscape:cx="1708.1183"
-     inkscape:cy="255.14831"
+     inkscape:zoom="1.5308038"
+     inkscape:cx="1938.0722"
+     inkscape:cy="867.8601"
      inkscape:document-units="mm"
      inkscape:current-layer="layer6"
      inkscape:document-rotation="0"
@@ -663,16 +663,13 @@
        inkscape:transform-center-y="-0.53498205"
        style="fill:#00adee;stroke-width:0.426548"
        d="m 202.96251,154.88332 c 0,0 -2.68725,2.81522 -2.68725,4.47877 0.0853,1.49291 1.4076,2.60192 2.90053,2.51662 1.36495,-0.0853 2.43131,-1.15168 2.51663,-2.51662 -0.0427,-1.66355 -2.72991,-4.47877 -2.72991,-4.47877 m 1.10902,2.81522 0.46921,0.42654 -2.68725,2.55929 -0.46921,-0.42654 m 0.55451,-2.51664 c 0.29858,0 0.55451,0.21327 0.55451,0.51186 v 0 0 c 0,0.29859 -0.25593,0.55452 -0.55451,0.51186 v 0 0 c -0.29858,0 -0.55451,-0.21327 -0.55451,-0.51186 v 0 0 c 0,-0.29859 0.25593,-0.51186 0.55451,-0.51186 v 0 0 m 2.00479,1.87682 c 0.29857,0 0.51186,0.25593 0.4692,0.5545 -0.0428,0.29859 -0.25593,0.51186 -0.55452,0.46922 -0.25593,0 -0.4692,-0.25593 -0.4692,-0.51186 v 0 c 0,-0.29859 0.25593,-0.51186 0.55452,-0.51186 z" />
-    <g
-       inkscape:label="sensor.sensor_camera_temperature"
-       transform="matrix(0.85425838,0,0,0.85425838,172.7536,70.626076)"
+    <text
+       style="font-size:8.95608px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:0.74634"
+       transform="scale(0.87367042,1.1445964)"
        id="sensor.sensor_camera_temperature"
-       style="fill:#f2f29e;fill-opacity:1">
-      <text
-         style="font-size:12px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         id="text957-6">XX</text>
-    </g>
+       x="210.62343"
+       y="133.09181"
+       inkscape:label="sensor.sensor_camera_temperature">XX</text>
     <text
        style="font-size:8.90241px;font-family:ArialMT;fill:#f0f09d;fill-opacity:1;stroke-width:0.741865;enable-background:new"
        inkscape:label="sensor.sensor_camera_humidity"
@@ -687,16 +684,13 @@
        inkscape:transform-center-x="-15.514357"
        inkscape:connector-curvature="0"
        id="path5264-8-6-6" />
-    <g
+    <text
        id="sensor.sensor_ludovica_temperature"
-       transform="matrix(0.85425838,0,0,0.85425838,260.7536,65.626076)"
-       inkscape:label="sensor.sensor_ludovica_temperature"
-       style="fill:#f2f29e;fill-opacity:1">
-      <text
-         id="text957-6-1"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         style="font-size:12px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1">XX</text>
-    </g>
+       transform="scale(0.87367042,1.1445964)"
+       style="font-size:8.95608px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:0.74634"
+       x="311.3479"
+       y="128.72345"
+       inkscape:label="sensor.sensor_ludovica_temperature">XX</text>
     <text
        transform="scale(0.86855702,1.1513349)"
        y="136.65472"
@@ -709,24 +703,18 @@
        inkscape:connector-curvature="0"
        style="fill:#3d3b3f;stroke-width:0.371664"
        d="M 90.735852,38 H 11.298627 C 8.9221511,38 7,35.667987 7,32.743083 V 13.256919 C 7,10.371541 8.9221511,8 11.298627,8 h 79.402276 c 2.376477,0 4.298628,2.332028 4.298628,5.256919 V 32.743083 C 95.034482,35.667987 93.112328,38 90.735852,38 Z" />
-    <g
-       inkscape:label="sensor.date"
+    <text
        id="sensor.date"
-       transform="matrix(0.39387181,0,0,0.39387181,-5.8797327,-6.7529561)">
-      <text
-         id="text4522"
-         transform="translate(41.3238,63.3948)"
-         style="font-size:17.93px;font-family:Helvetica;fill:#ffffa6">Friday, June 30</text>
-    </g>
-    <g
-       inkscape:label="sensor.time"
+       style="font-size:7.06212px;font-family:Helvetica;fill:#ffffa6;stroke-width:0.393872"
+       x="10.396547"
+       y="18.216469"
+       inkscape:label="sensor.date">Friday, June 30</text>
+    <text
        id="sensor.time"
-       transform="matrix(0.34475593,0,0,0.34475593,-2.0657403,-2.40513)">
-      <text
-         id="text4525"
-         transform="translate(35.34,100.4411)"
-         style="font-size:37.7086px;font-family:Helvetica;fill:#ffffa6">9:36 PM</text>
-    </g>
+       style="font-size:13.0003px;font-family:Helvetica;fill:#ffffa6;stroke-width:0.344756"
+       x="10.117934"
+       y="32.222534"
+       inkscape:label="sensor.time">9:36 PM</text>
     <g
        style="display:inline;fill:#d40000"
        id="g276"
@@ -870,16 +858,13 @@
        inkscape:transform-center-x="-15.514357"
        inkscape:connector-curvature="0"
        id="path5264-8-6-5" />
-    <g
+    <text
        id="sensor.sensor_bagno_temperature"
-       transform="matrix(0.85425838,0,0,0.85425838,157.12186,4.3156484)"
-       inkscape:label="sensor.sensor_bagno_temperature"
-       style="display:inline;fill:#f2f29e;fill-opacity:1">
-      <text
-         id="text957-6-9"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         style="font-size:12px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1">XX</text>
-    </g>
+       transform="scale(0.87367042,1.1445964)"
+       style="font-size:8.95608px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:0.74634"
+       x="192.7314"
+       y="75.158348"
+       inkscape:label="sensor.sensor_bagno_temperature">XX</text>
     <text
        transform="scale(0.86855702,1.1513349)"
        y="83.403122"
@@ -962,16 +947,13 @@
        inkscape:transform-center-x="-15.514357"
        inkscape:connector-curvature="0"
        id="path5264-8-6-59" />
-    <g
+    <text
        id="sensor.temperature_10"
-       transform="matrix(0.85425838,0,0,0.85425838,257.71439,-31.123455)"
-       inkscape:label="sensor.temperature_10"
-       style="display:inline;fill:#ffffa6;fill-opacity:1">
-      <text
-         id="text957-6-93"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         style="font-size:12px;font-family:ArialMT;fill:#ffffa6;fill-opacity:1">XX</text>
-    </g>
+       transform="scale(0.87367042,1.1445964)"
+       style="font-size:8.95608px;font-family:ArialMT;fill:#ffffa6;fill-opacity:1;stroke-width:0.74634"
+       x="307.86923"
+       y="44.196255"
+       inkscape:label="sensor.temperature_10">XX</text>
     <text
        transform="scale(0.86855702,1.1513349)"
        y="52.622246"
@@ -1054,16 +1036,13 @@
        inkscape:transform-center-x="-15.514357"
        inkscape:connector-curvature="0"
        id="path5264-8-6-58" />
-    <g
+    <text
        id="sensor.sensor_cucina_temperature"
-       transform="matrix(0.85425838,0,0,0.85425838,422.64252,57.201691)"
-       inkscape:label="sensor.sensor_cucina_temperature"
-       style="display:inline;fill:#f2f29e;fill-opacity:1">
-      <text
-         id="text957-6-99"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         style="font-size:12px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1">XX</text>
-    </g>
+       transform="scale(0.87367042,1.1445964)"
+       style="font-size:8.95608px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:0.74634"
+       x="496.64539"
+       y="121.36332"
+       inkscape:label="sensor.sensor_cucina_temperature">XX</text>
     <text
        transform="scale(0.86855702,1.1513349)"
        y="129.33766"
@@ -1155,16 +1134,13 @@
        rx="12.176604"
        ry="10.958944"
        inkscape:label="alarm_control_panel.allarme" />
-    <g
-       style="display:inline;fill:#f2f29e;fill-opacity:1"
-       inkscape:label="sensor.temperature_5"
-       transform="matrix(0.85425838,0,0,0.85425838,342.7536,39.626076)"
-       id="sensor.temperature_5">
-      <text
-         style="font-size:12px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         id="text957-6-99-9">XX</text>
-    </g>
+    <text
+       style="font-size:8.95608px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:0.74634"
+       transform="scale(0.87367042,1.1445964)"
+       id="sensor.temperature_5"
+       x="405.2048"
+       y="106.00803"
+       inkscape:label="sensor.temperature_5">XX</text>
     <g
        style="display:inline;fill:#d40000"
        id="g276-3-1"
@@ -1274,24 +1250,19 @@
          d="m 256,241 c -8.27734,0 -15,6.72266 -15,15 0,8.27734 6.72266,15 15,15 8.27734,0 15,-6.72266 15,-15 0,-8.27734 -6.72266,-15 -15,-15 z m 0,0"
          id="path1927" />
     </g>
-    <g
-       style="display:inline;fill:#f2f29e;fill-opacity:1"
-       inkscape:label="sensor.wind_2"
-       transform="matrix(1.3979686,0,0,1.3979686,434.4704,-105.23967)"
-       id="sensor.wind_2">
-      <text
-         y="83.567101"
-         x="13.789666"
-         style="font-size:10.484px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:0.87367"
-         transform="scale(0.87367041,1.1445964)"
-         id="text957-6-99-0">XX</text>
-    </g>
+    <text
+       y="24.879396"
+       x="516.57074"
+       style="font-size:14.6563px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:1.22136"
+       transform="scale(0.87367041,1.1445964)"
+       id="sensor.wind_2"
+       inkscape:label="sensor.wind_2">XX</text>
     <ellipse
        inkscape:label="climate.condizionatore_salotto"
        ry="12.949285"
        rx="14.388086"
        cy="266.9501"
-       cx="485.09436"
+       cx="479.80261"
        id="climate.condizionatore_salotto"
        style="display:inline;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:#3d3b3f;stroke-width:0.502827;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <ellipse
@@ -1331,16 +1302,13 @@
        cy="137.3087"
        inkscape:label="light.aqara_03"
        r="3.9276557" />
-    <g
+    <text
        id="fan.air_purifier"
-       transform="matrix(1.3979686,0,0,1.3979686,40.969915,139.83667)"
-       inkscape:label="fan.air_purifier"
-       style="display:inline;fill:#f2f29e;fill-opacity:1">
-      <text
-         id="text957-6-99-0-4"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         style="font-size:12px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1">XX</text>
-    </g>
+       transform="scale(0.87367041,1.1445964)"
+       style="font-size:14.6564px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:1.22136"
+       x="67.988586"
+       y="238.99535"
+       inkscape:label="fan.air_purifier">XX</text>
     <text
        style="font-size:8.95609px;font-family:ArialMT;display:inline;fill:#ffffa6;fill-opacity:1;stroke-width:0.746339"
        transform="scale(0.87367041,1.1445964)"
@@ -1484,55 +1452,44 @@
          d="m 322.2771,225.97995 a 2.3060204,2.3060204 0 0 1 -0.57256,-0.0728 c -2.15431,-0.55041 -3.28942,-4.08287 -3.33766,-4.23306 a 0.30342374,0.30342374 0 0 1 0.22089,-0.38657 c 2.3667,-0.56163 4.0853,-0.36987 5.11057,0.56983 1.19427,1.09476 0.96276,2.76905 0.95244,2.84005 a 0.30342374,0.30342374 0 0 1 -0.091,0.17447 c -0.76585,0.73701 -1.53138,1.1081 -2.28266,1.1081 z m -3.21963,-4.17663 c 0.31708,0.84443 1.30472,3.13437 2.79817,3.51517 0.6909,0.17598 1.43216,-0.0956 2.20377,-0.80863 0.024,-0.33892 0.0352,-1.46978 -0.77525,-2.20922 -0.82379,-0.75068 -2.24503,-0.91786 -4.22669,-0.49732 z"
          style="fill:#55f29e;fill-opacity:1;stroke-width:0.303424" />
     </g>
-    <g
+    <text
        id="sensor.plant_moisture_00"
-       transform="matrix(0.85425838,0,0,0.85425838,351.74633,154.76004)"
-       inkscape:label="sensor.plant_moisture_00"
-       style="display:inline;fill:#f2f29e;fill-opacity:1">
-      <text
-         id="text957-6-99-9-4"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         style="font-size:12px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1">X</text>
-    </g>
-    <g
-       style="display:inline;fill:#f2f29e;fill-opacity:1"
-       inkscape:label="sensor.plant_moisture_01"
-       transform="matrix(0.85425838,0,0,0.85425838,377.38283,154.92687)"
-       id="sensor.plant_moisture_01">
-      <text
-         style="font-size:12px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1"
-         transform="matrix(0.7633,0,0,1,13.1832,95.6506)"
-         id="text957-6-99-9-4-2">X</text>
-    </g>
-    <g
-       id="g1213-8"
-       style="display:inline"
-       transform="translate(66.941038,-2.1321653)">
-      <path
-         style="fill:#808080;fill-opacity:1;stroke-width:0.303424"
-         d="m 329.44548,239.12882 h -7.93544 a 0.30342374,0.30342374 0 0 1 -0.29857,-0.24972 l -1.42851,-7.93574 a 0.30342374,0.30342374 0 0 1 0.29856,-0.35713 H 330.874 a 0.30342374,0.30342374 0 0 1 0.29857,0.35713 l -1.42821,7.93574 a 0.30342374,0.30342374 0 0 1 -0.29888,0.24972 z m -7.68177,-0.60685 h 7.42811 l 1.3205,-7.3289 h -10.0679 z"
-         id="path2892-7" />
-      <path
-         style="fill:#808080;fill-opacity:1;stroke-width:0.303424"
-         d="m 331.8131,231.19307 h -12.67067 a 0.47607185,0.47607185 0 0 1 -0.47547,-0.47546 v -1.68613 a 0.47607185,0.47607185 0 0 1 0.47547,-0.47516 h 12.67067 a 0.47607185,0.47607185 0 0 1 0.47547,0.47516 v 1.68643 a 0.47607185,0.47607185 0 0 1 -0.47547,0.47516 z m -12.53929,-0.60684 h 12.40791 v -1.42336 h -12.40791 z"
-         id="path2894-7" />
-      <path
-         style="fill:#808080;fill-opacity:1;stroke-width:0.303424"
-         d="m 325.63054,229.16287 h -0.0231 a 0.30342374,0.30342374 0 0 1 -0.27976,-0.32527 10.259667,10.259667 0 0 1 0.32345,-1.89883 10.528804,10.528804 0 0 1 3.7843,-5.66917 0.30344219,0.30344219 0 0 1 0.36897,0.48184 9.9219563,9.9219563 0 0 0 -3.56675,5.34268 9.6685975,9.6685975 0 0 0 -0.30342,1.78808 0.30342374,0.30342374 0 0 1 -0.30373,0.28067 z"
-         id="path2896-4" />
-      <path
-         style="fill:#55f29e;fill-opacity:1;stroke-width:0.303424"
-         d="m 329.37236,225.59218 a 5.4974313,5.4974313 0 0 1 -2.56575,-0.75037 0.30342374,0.30342374 0 0 1 -0.13351,-0.14382 c -0.04,-0.091 -0.97095,-2.23381 0.20876,-4.13264 1.02102,-1.64061 3.26635,-2.54117 6.67411,-2.67619 a 0.29765869,0.29765869 0 0 1 0.22574,0.088 0.30342374,0.30342374 0 0 1 0.0895,0.22514 c -0.007,0.22059 -0.20511,5.42188 -2.88252,6.9654 a 3.1823082,3.1823082 0 0 1 -1.61634,0.42449 z m -2.18131,-1.23342 c 1.38907,0.72275 2.56393,0.81924 3.49301,0.2837 2.0293,-1.17031 2.4723,-4.98313 2.55908,-6.13068 -3.0039,0.1681 -4.96826,0.96459 -5.84455,2.36944 -0.88388,1.4185 -0.35895,3.07186 -0.20785,3.47724 z"
-         id="path2898-4" />
-      <path
-         style="fill:#808080;fill-opacity:1;stroke-width:0.303424"
-         d="m 325.94428,227.32078 a 0.30342374,0.30342374 0 0 1 -0.28037,-0.18721 6.8995524,6.8995524 0 0 0 -3.81616,-3.76731 0.30342374,0.30342374 0 1 1 0.22575,-0.56316 7.5067033,7.5067033 0 0 1 4.15084,4.09774 0.30342374,0.30342374 0 0 1 -0.28006,0.41994 z"
-         id="path2900-9" />
-      <path
-         style="fill:#55f29e;fill-opacity:1;stroke-width:0.303424"
-         d="m 322.2771,225.97995 a 2.3060204,2.3060204 0 0 1 -0.57256,-0.0728 c -2.15431,-0.55041 -3.28942,-4.08287 -3.33766,-4.23306 a 0.30342374,0.30342374 0 0 1 0.22089,-0.38657 c 2.3667,-0.56163 4.0853,-0.36987 5.11057,0.56983 1.19427,1.09476 0.96276,2.76905 0.95244,2.84005 a 0.30342374,0.30342374 0 0 1 -0.091,0.17447 c -0.76585,0.73701 -1.53138,1.1081 -2.28266,1.1081 z m -3.21963,-4.17663 c 0.31708,0.84443 1.30472,3.13437 2.79817,3.51517 0.6909,0.17598 1.43216,-0.0956 2.20377,-0.80863 0.024,-0.33892 0.0352,-1.46978 -0.77525,-2.20922 -0.82379,-0.75068 -2.24503,-0.91786 -4.22669,-0.49732 z"
-         id="path2902-1" />
-    </g>
+       transform="scale(0.87367042,1.1445964)"
+       style="font-size:8.95608px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:0.74634"
+       x="415.49786"
+       y="206.59717"
+       inkscape:label="sensor.plant_moisture_00">X</text>
+    <text
+       style="font-size:8.95608px;font-family:ArialMT;fill:#f2f29e;fill-opacity:1;stroke-width:0.74634"
+       transform="scale(0.87367042,1.1445964)"
+       id="sensor.plant_moisture_01"
+       x="444.84131"
+       y="206.74292"
+       inkscape:label="sensor.plant_moisture_01">X</text>
+    <path
+       style="fill:#808080;fill-opacity:1;stroke-width:0.303424"
+       d="m 396.38652,236.99665 h -7.93544 a 0.30342374,0.30342374 0 0 1 -0.29857,-0.24972 l -1.42851,-7.93574 a 0.30342374,0.30342374 0 0 1 0.29856,-0.35713 h 10.79248 a 0.30342374,0.30342374 0 0 1 0.29857,0.35713 l -1.42821,7.93574 a 0.30342374,0.30342374 0 0 1 -0.29888,0.24972 z m -7.68177,-0.60685 h 7.42811 l 1.3205,-7.3289 h -10.0679 z"
+       id="path2892-7" />
+    <path
+       style="fill:#808080;fill-opacity:1;stroke-width:0.303424"
+       d="m 398.75414,229.0609 h -12.67067 a 0.47607185,0.47607185 0 0 1 -0.47547,-0.47546 v -1.68613 a 0.47607185,0.47607185 0 0 1 0.47547,-0.47516 h 12.67067 a 0.47607185,0.47607185 0 0 1 0.47547,0.47516 v 1.68643 a 0.47607185,0.47607185 0 0 1 -0.47547,0.47516 z m -12.53929,-0.60684 h 12.40791 v -1.42336 h -12.40791 z"
+       id="path2894-7" />
+    <path
+       style="fill:#808080;fill-opacity:1;stroke-width:0.303424"
+       d="m 392.57158,227.0307 h -0.0231 a 0.30342374,0.30342374 0 0 1 -0.27976,-0.32527 10.259667,10.259667 0 0 1 0.32345,-1.89883 10.528804,10.528804 0 0 1 3.7843,-5.66917 0.30344219,0.30344219 0 0 1 0.36897,0.48184 9.9219563,9.9219563 0 0 0 -3.56675,5.34268 9.6685975,9.6685975 0 0 0 -0.30342,1.78808 0.30342374,0.30342374 0 0 1 -0.30373,0.28067 z"
+       id="path2896-4" />
+    <path
+       style="fill:#55f29e;fill-opacity:1;stroke-width:0.303424"
+       d="m 396.3134,223.46001 a 5.4974313,5.4974313 0 0 1 -2.56575,-0.75037 0.30342374,0.30342374 0 0 1 -0.13351,-0.14382 c -0.04,-0.091 -0.97095,-2.23381 0.20876,-4.13264 1.02102,-1.64061 3.26635,-2.54117 6.67411,-2.67619 a 0.29765869,0.29765869 0 0 1 0.22574,0.088 0.30342374,0.30342374 0 0 1 0.0895,0.22514 c -0.007,0.22059 -0.20511,5.42188 -2.88252,6.9654 a 3.1823082,3.1823082 0 0 1 -1.61634,0.42449 z m -2.18131,-1.23342 c 1.38907,0.72275 2.56393,0.81924 3.49301,0.2837 2.0293,-1.17031 2.4723,-4.98313 2.55908,-6.13068 -3.0039,0.1681 -4.96826,0.96459 -5.84455,2.36944 -0.88388,1.4185 -0.35895,3.07186 -0.20785,3.47724 z"
+       id="path2898-4" />
+    <path
+       style="fill:#808080;fill-opacity:1;stroke-width:0.303424"
+       d="m 392.88532,225.18861 a 0.30342374,0.30342374 0 0 1 -0.28037,-0.18721 6.8995524,6.8995524 0 0 0 -3.81616,-3.76731 0.30342374,0.30342374 0 1 1 0.22575,-0.56316 7.5067033,7.5067033 0 0 1 4.15084,4.09774 0.30342374,0.30342374 0 0 1 -0.28006,0.41994 z"
+       id="path2900-9" />
+    <path
+       style="fill:#55f29e;fill-opacity:1;stroke-width:0.303424"
+       d="m 389.21814,223.84778 a 2.3060204,2.3060204 0 0 1 -0.57256,-0.0728 c -2.15431,-0.55041 -3.28942,-4.08287 -3.33766,-4.23306 a 0.30342374,0.30342374 0 0 1 0.22089,-0.38657 c 2.3667,-0.56163 4.0853,-0.36987 5.11057,0.56983 1.19427,1.09476 0.96276,2.76905 0.95244,2.84005 a 0.30342374,0.30342374 0 0 1 -0.091,0.17447 c -0.76585,0.73701 -1.53138,1.1081 -2.28266,1.1081 z m -3.21963,-4.17663 c 0.31708,0.84443 1.30472,3.13437 2.79817,3.51517 0.6909,0.17598 1.43216,-0.0956 2.20377,-0.80863 0.024,-0.33892 0.0352,-1.46978 -0.77525,-2.20922 -0.82379,-0.75068 -2.24503,-0.91786 -4.22669,-0.49732 z"
+       id="path2902-1" />
     <ellipse
        style="display:inline;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:#3d3b3f;stroke-width:0.425548;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="vacuum.aspirapolvere"

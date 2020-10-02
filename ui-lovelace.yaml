@@ -48,18 +48,21 @@ views:
   - icon: mdi:test-tube
     id: experimental
     title: Experimental
-    #panel: true
+    panel: true
     cards:
       - type: glance
         entities:
-        - entity: switch.alimentazioneesterna
-          name: Alimentazione esterna 12V
-          icon: 'mdi:flash'
+        - entity: light.rele2wayc_01
+          name: Pompa 1
+          icon: 'mdi:water-pump'
           show_state: false
           tap_action:
             action: toggle
-        
-
+        - entity: light.rele2wayc_02
+          name: Pompa 2
+          icon: 'mdi:water-pump'
+          show_state: false
+          tap_action:
+            action: toggle
 
       
-    

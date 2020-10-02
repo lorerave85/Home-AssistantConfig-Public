@@ -1,9 +1,9 @@
-- name: floorplan
-  sidebar_title: Floorplan
-  sidebar_icon: mdi:home
-  url_path: floorplan
-  #module_url: /local/custom_ui/floorplan/lib/floorplan.js
-  config: !include floorplan_casa.yaml
+#- name: floorplan
+#  sidebar_title: Floorplan
+#  sidebar_icon: mdi:home
+#  url_path: floorplan
+#  #module_url: /local/custom_ui/floorplan/lib/floorplan.js
+#  config: !include floorplan_casa.yaml
 
 - name: example-panel
   # url_path needs to be unique for each panel_custom config
