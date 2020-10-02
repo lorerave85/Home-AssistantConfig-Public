@@ -45,6 +45,7 @@ http:
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
 
+#OK
 #weather:
 #  - platform: darksky
 #    api_key: !secret darksky_api
@@ -63,6 +64,7 @@ fan:
     model: zhimi.airpurifier.mb3
     name: Air Purifier
 
+#KO
 #ffmpeg:
 #  ffmpeg_bin: /usr/bin/ffmpeg
 #camera:
@@ -104,29 +106,29 @@ notify:
       - service: lorenzo
       - service: luana
 
-remote:
-  - platform: broadlink
-    host: !secret broadlink_ip
-    mac: !secret broadlink_mac
-    type: rm4_mini
+#KO
+#remote:
+#  - platform: broadlink
+#    host: !secret broadlink_ip
+#    mac: !secret broadlink_mac
+#    type: rm4_mini
 
 
 climate:
   - platform: smartir
     name: Condizionatore Salotto
-    controller_data: !secret broadlink_ip
+    controller_data: remote.broadlink_remote
     device_code: !secret device_code
 
+#OK
+#octoprint:
+#  host: !secret octoprint_host
+#  port: !secret octoprint_port
+#  api_key: !secret octoprint_token
+#  bed: true
+#  number_of_tools: 1
 
-octoprint:
-  host: !secret octoprint_host
-  port: !secret octoprint_port
-  api_key: !secret octoprint_token
-  bed: true
-  number_of_tools: 1
-
-
-# TUTTO OK      
+     
 modbus:
   name: hub1
   type: serial
@@ -143,9 +145,4 @@ device_tracker:
   - platform: ping
     hosts:
       hostone: !secret hostone_ip
-
-#i2c:
-#  sda: 3
-#  scl: 5
-#  scan: True
 

@@ -22,9 +22,8 @@ resources:
     type: module
   - url: /local/custom_ui/lib/slider-entity-row.js
     type: module
-  - type: module
-    url: /local/floorplan/floorplan-card.js?v=1.1.14
-    
+  - url: /local/floorplan/floorplan-card.js?v=1.1.14
+    type: module
 
 views:
   - !include lovelace/tabs/home.yaml

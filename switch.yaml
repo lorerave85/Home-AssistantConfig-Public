@@ -4,7 +4,7 @@
     24: RelePompa2
     27: AlimentazioneEsterna
 
-- platform: broadlink
-  host: !secret broadlink_ip
-  mac: !secret broadlink_mac
-  type: rm4_mini
+#- platform: broadlink
+#  host: !secret broadlink_ip
+#  mac: !secret broadlink_mac
+#  type: rm4_mini
