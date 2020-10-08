@@ -13,6 +13,7 @@
 * [HACS](#HACS)
 * [RTL-SDR](#RTL-SDR)
 * [MCP3008](#MCP3008)
+* [INA219](#INA219)
 * [API for host service](#API-for-host-service)
 * [Ripristino](#Ripristino)
 

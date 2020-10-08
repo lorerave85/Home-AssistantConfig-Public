@@ -22,7 +22,8 @@
       //this.setIsLoading(true);
     }
 
-    hassChanged(newHass, oldHass) {
+    //hassChanged(newHass, oldHass) {
+    hassChanged(newHass) {
       this.hass = newHass;
 
       if (!this.config) return;
@@ -242,8 +243,8 @@
       const pageInfo = { config: pageConfig };
 
       // Merge the page's rules with the main config's rules
-      if (pageInfo.config.rules && this.config.rules) {
-        pageInfo.config.rules = pageInfo.config.rules.concat(this.config.rules);
+      if (pageInfo.config.groups && this.config.groups) {
+        pageInfo.config.groups = pageInfo.config.groups.concat(this.config.rules);
       }
 
       this.pageInfos[pageInfo.config.page_id] = pageInfo;
@@ -317,6 +318,10 @@
           else {
             $(this.root).find('#floorplan').append(svg);
           }
+
+          // Test
+          //$("#floorplan").append(svg);
+
 
           // Enable pan / zoom if enabled in config
           if (this.isOptionEnabled(this.config.pan_zoom)) {
@@ -554,7 +559,7 @@
     /***************************************************************************************************************************/
 
     initFloorplan(svg, config) {
-      if (!config.rules) {
+      if (!config.groups) {
         return Promise.resolve();;
       }
 
@@ -579,14 +584,14 @@
     initRules(config, svg, svgElements) {
       // Apply default options to rules that don't override the options explictly
       if (config.defaults) {
-        for (let rule of config.rules) {
+        for (let rule of config.groups) {
           rule.hover_over = (rule.hover_over === undefined) ? config.defaults.hover_over : rule.hover_over;
           rule.more_info = (rule.more_info === undefined) ? config.defaults.more_info : rule.more_info;
           rule.propagate = (rule.propagate === undefined) ? config.defaults.propagate : rule.propagate;
         }
       }
 
-      for (let rule of config.rules) {
+      for (let rule of config.groups) {
         if (rule.entity || rule.entities) {
           this.initEntityRule(rule, svg, svgElements);
         }
@@ -1354,7 +1359,7 @@
     validateConfig(config) {
       let isValid = true;
 
-      if (!config.pages && !config.rules) {
+      if (!config.pages && !config.groups) {
         this.setIsLoading(false);
         //this.logError('CONFIG', `Cannot find 'pages' nor 'rules' in floorplan configuration`);
         isValid = false;
@@ -1367,18 +1372,18 @@
           }
         }
         else {
-          if (!config.rules) {
+          if (!config.groups) {
             this.logError('CONFIG', `Cannot find 'rules' in floorplan configuration`);
             isValid = false;
           }
 
-          let invalidRules = config.rules.filter(x => x.entities && x.elements);
+          let invalidRules = config.groups.filter(x => x.entities && x.elements);
           if (invalidRules.length) {
             this.logError('CONFIG', `A rule cannot contain both 'entities' and 'elements' in floorplan configuration`);
             isValid = false;
           }
 
-          invalidRules = config.rules.filter(x => !(x.entity || x.entities) && !(x.element || x.elements));
+          invalidRules = config.groups.filter(x => !(x.entity || x.entities) && !(x.element || x.elements));
           if (invalidRules.length) {
             this.logError('CONFIG', `A rule must contain either 'entities' or 'elements' in floorplan configuration`);
             isValid = false;
@@ -1699,9 +1704,10 @@
 
       if ((!this.config && (level === 'error')) || isTargetLogLevel) {
         // Always log error messages that occur before the config has been loaded
-        const log = $(this.root).find('#log');
-        $(log).find('ul').prepend(`<li class="${level}">${text}</li>`)
-        $(log).css('display', 'block');
+        //const log = $(this.root).find('#log');
+        //$(log).find('ul').prepend(`<li class="${level}">${text}</li>`)
+        //$(log).css('display', 'block');
+        console.log(text);
       }
     }
 

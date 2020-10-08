@@ -49,19 +49,58 @@ views:
     title: Experimental
     panel: true
     cards:
-      - type: glance
-        entities:
-        - entity: light.rele2wayc_01
-          name: Pompa 1
-          icon: 'mdi:water-pump'
-          show_state: false
-          tap_action:
-            action: toggle
-        - entity: light.rele2wayc_02
-          name: Pompa 2
-          icon: 'mdi:water-pump'
-          show_state: false
-          tap_action:
-            action: toggle
-
-      
+      #- type: glance
+      #  entities:
+      #  - entity: light.rele2wayc_01
+      #    name: Pompa 1
+      #    icon: 'mdi:water-pump'
+      #    show_state: false
+      #    tap_action:
+      #      action: toggle
+      #  - entity: light.rele2wayc_02
+      #    name: Pompa 2
+      #    icon: 'mdi:water-pump'
+      #    show_state: false
+      #    tap_action:
+      #      action: toggle
+      - type: custom:vertical-stack-in-card
+        title: Purificatore D'aria
+        cards:
+          - type: glance
+            entities:
+              - entity: sensor.octoprint_current_state
+              - entity: sensor.octoprint_job_percentage
+              - entity: sensor.octoprint_time_elapsed
+              - entity: sensor.octoprint_time_remaining
+              - entity: sensor.octoprint_target_bed_temp
+              - entity: sensor.octoprint_actual_bed_temp
+              - entity: sensor.octoprint_actual_tool0_temp
+              - entity: sensor.octoprint_target_tool0_temp
+              - entity: sensor.octoprint_print_file
+              - entity: switch.octoprint_cancel_print
+              - entity: switch.octoprint_emergency_stop
+              - entity: switch.octoprint_pause_print
+              - entity: switch.octoprint_shutdown_system
+          - type: horizontal-stack
+            title: Lights
+            cards:  
+              - type: gauge
+                entity: sensor.octoprint_actual_tool0_temp
+                name: Extrus
+                max: 210
+                min: 0
+                severity:
+                  green: 200
+                  yellow: 150
+                  red: 100
+              - type: gauge
+                entity: sensor.octoprint_actual_bed_temp
+                name: Bed
+                max: 70
+                min: 0
+                severity:
+                  green: 60
+                  yellow: 40
+                  red: 20
+                
+            
