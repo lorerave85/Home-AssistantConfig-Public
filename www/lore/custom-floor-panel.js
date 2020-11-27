@@ -130,20 +130,29 @@ class FloorPanelV2 extends LitElement {
     render() {
         return html `
         <ha-app-layout>
-        <app-header slot="header" fixed>
-          <app-toolbar>
-            <ha-menu-button
-              .hass=${this.hass}
-              .narrow=${this.narrow}
-            ></ha-menu-button>
-            <div main-title>Floor Panel</div>
-          </app-toolbar>
-        </app-header>
- 
-        <div id="floorplan"></div>
-
-      </ha-app-layout>
-      
+            <app-header slot="header" fixed>
+              <app-toolbar>
+                <ha-menu-button
+                  .hass=${this.hass}
+                  .narrow=${this.narrow}
+                ></ha-menu-button>
+                <div main-title>Floor Panel</div>
+              </app-toolbar>
+            </app-header>
+        
+            <div class="container uni-virtualizer-host">
+                ${this._isLoading
+                    ? html `<div class="progress-wrapper">
+                        <ha-circular-progress
+                          active
+                          alt=${this.hass.localize("ui.common.loading")}
+                        ></ha-circular-progress>
+                      </div>`
+                    : html `
+                    <div id="floorplan"></div>
+                      `}
+            </div>
+        </ha-app-layout>
     `;
     }
 
@@ -163,7 +172,15 @@ class FloorPanelV2 extends LitElement {
         :host([narrow]) .progress-wrapper {
           height: calc(100vh - 198px);
         }
- 
+
+        .uni-virtualizer-host {
+          display: block;
+          position: relative;
+          contain: strict;
+          height: 100%;
+          overflow: auto;
+        }
+        
         ha-circular-progress {
           position: absolute;
           left: 50%;

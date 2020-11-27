@@ -3,6 +3,12 @@
     - 'time'
     - 'date'
 
+- platform: template
+  sensors:
+    simple_time_date:
+      friendly_name: "Simple Date"
+      value_template: "{{ as_timestamp(now()) | timestamp_custom('%d %B %Y') }}"
+
 - platform: mitemp_bt
   name: "sensor camera"
   mac: !secret sensor_temperature_mac_camera

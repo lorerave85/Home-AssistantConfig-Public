@@ -56,7 +56,7 @@ cards:
 
         - name: text_font_datetime
           entities:
-            - sensor.date
+            - sensor.simple_time_date
             - sensor.time
           text_template: '${entity.state ? entity.state : "undefined"}'
           class_template: 'return "static-text";'
@@ -108,6 +108,14 @@ cards:
               }
             return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
             '
+        - name: Printer_3D_Info
+          entities:
+            -  sensor.octoprint_time_elapsed
+            -  sensor.octoprint_time_remaining
+            -  sensor.octoprint_actual_bed_temp
+            -  sensor.octoprint_actual_tool0_temp
+          text_template: '${entity.state != "unknown" ? entity.state : "--"}'
+          class_template: 'return "static-text";'
 
         - name: Alarm
           entities:
@@ -191,6 +199,9 @@ cards:
               case "off":
                 imageName = "lightOFF";
                 break;
+              case "unavailable":
+                imageName = "lightOFF";
+                break;  
               }
             return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
             '
@@ -218,6 +229,38 @@ cards:
             -  sensor.plant_moisture_01
           text_template: '${entity.state != "unknown" ? entity.state : "-"}'
           class_template: 'return "static-text";'
+
+        - name: BalconyBlindUP
+          entities:
+            - light.rele2wayc_01
+          image_template: '
+            var imageName = "";
+            switch (entity.state) {
+              case "on":
+                imageName = "BlindONUP";
+                break;
+              case "off":
+                imageName = "BlindOFFUP";
+                break;
+              }
+            return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
+            '
+
+        - name: BalconyBlindDOWN
+          entities:
+            - light.rele2wayc_02
+          image_template: '
+            var imageName = "";
+            switch (entity.state) {
+              case "on":
+                imageName = "BlindONDOWN";
+                break;
+              case "off":
+                imageName = "BlindOFFDOWN";
+                break;
+              }
+            return "/local/custom_ui/floorplan/images/other/" + imageName + ".svg";
+            '
 
       stylesheet: /local/custom_ui/floorplan/casa.css
     

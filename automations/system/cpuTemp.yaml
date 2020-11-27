@@ -1,0 +1,12 @@
+- id: '1605803491817'
+  alias: New_value_CPUTTemp
+  trigger:
+  - platform: state
+    entity_id: sensor.raspcpu
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/cputemp
+      payload_template: "{{ states('sensor.raspcpu') }}"
+  mode: single

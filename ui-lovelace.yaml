@@ -10,11 +10,11 @@ resources:
     type: module
   - url: /local/custom_ui/lib/button-card.js
     type: module
-  - url: /local/custom_ui/lib/mini-graph-card-bundle.js?v=0.9.2
+  - url: /local/custom_ui/lib/mini-graph-card-bundle.js?v=0.9.4
     type: module
   - url: /local/custom_ui/lib/air-filter-card.js
     type: module
-  - url: /local/custom_ui/lib/xiaomi-vacuum-card.js?v=3.0.1
+  - url: /local/custom_ui/lib/xiaomi-vacuum-card.js?v=4.0.1
     type: module
   - url: /local/custom_ui/lib/mini-media-player-bundle.js?v=1.9.1
     type: module
@@ -63,44 +63,76 @@ views:
       #    show_state: false
       #    tap_action:
       #      action: toggle
-      - type: custom:vertical-stack-in-card
-        title: Purificatore D'aria
-        cards:
-          - type: glance
-            entities:
-              - entity: sensor.octoprint_current_state
-              - entity: sensor.octoprint_job_percentage
-              - entity: sensor.octoprint_time_elapsed
-              - entity: sensor.octoprint_time_remaining
-              - entity: sensor.octoprint_target_bed_temp
-              - entity: sensor.octoprint_actual_bed_temp
-              - entity: sensor.octoprint_actual_tool0_temp
-              - entity: sensor.octoprint_target_tool0_temp
-              - entity: sensor.octoprint_print_file
-              - entity: switch.octoprint_cancel_print
-              - entity: switch.octoprint_emergency_stop
-              - entity: switch.octoprint_pause_print
-              - entity: switch.octoprint_shutdown_system
-          - type: horizontal-stack
-            title: Lights
-            cards:  
-              - type: gauge
-                entity: sensor.octoprint_actual_tool0_temp
-                name: Extrus
-                max: 210
-                min: 0
-                severity:
-                  green: 200
-                  yellow: 150
-                  red: 100
-              - type: gauge
-                entity: sensor.octoprint_actual_bed_temp
-                name: Bed
-                max: 70
-                min: 0
-                severity:
-                  green: 60
-                  yellow: 40
-                  red: 20
+      #- type: custom:vertical-stack-in-card
+      #  title: Purificatore D'aria
+      #  cards:
+      #    - type: glance
+      #      entities:
+      #        - entity: sensor.octoprint_current_state
+      #        - entity: sensor.octoprint_job_percentage
+      #        - entity: sensor.octoprint_time_elapsed
+      #        - entity: sensor.octoprint_time_remaining
+      #        - entity: sensor.octoprint_target_bed_temp
+      #        - entity: sensor.octoprint_actual_bed_temp
+      #        - entity: sensor.octoprint_actual_tool0_temp
+      #        - entity: sensor.octoprint_target_tool0_temp
+      #        - entity: sensor.octoprint_print_file
+      #        - entity: switch.octoprint_cancel_print
+      #        - entity: switch.octoprint_emergency_stop
+      #        - entity: switch.octoprint_pause_print
+      #        - entity: switch.octoprint_shutdown_system
+      #    - type: horizontal-stack
+      #      title: Lights
+      #      cards:  
+      #        - type: gauge
+      #          entity: sensor.octoprint_actual_tool0_temp
+      #          name: Extrus
+      #          max: 210
+      #          min: 0
+      #          severity:
+      #            green: 200
+      #            yellow: 150
+      #            red: 100
+      #        - type: gauge
+      #          entity: sensor.octoprint_actual_bed_temp
+      #          name: Bed
+      #          max: 70
+      #          min: 0
+      #          severity:
+      #            green: 60
+      #            yellow: 40
+      #            red: 20
+      #        - type: gauge
+      #          entity: sensor.octoprint_job_percentage
+      #          name: Bed
+      #          max: 100
+      #          min: 0
+      #          
                 
-            
+      - type: glance
+        title: Scene
+        show_state: false
+        entities:   
+          - entity: scene.soggiorno_sera 
+            icon: mdi:weather-night
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.soggiorno_sera 
+          - entity: scene.soggiorno_film
+            icon: mdi:movie-open-outline
+            tap_action:
+              action: call-service
+              service: scene.turn_on
+              service_data:
+                entity_id: scene.soggiorno_film
+
+           
+          #- entity: scene.soggiorno_sera
+          #  tap_action: call-service
+          #  service: scene.turn_on
+          #- entity: scene.soggiorno_film
+          #  tap_action: call-service
+          #  service: scene.turn_on
+          #

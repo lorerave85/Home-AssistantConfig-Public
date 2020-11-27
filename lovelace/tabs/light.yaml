@@ -42,3 +42,10 @@ cards:
           show_name: false
           entity: switch.on_off_plug_in_unit_12
           icon: 'mdi:desk-lamp'
+
+- type: custom:vertical-stack-in-card
+  title: Cubo
+  cards:
+    - type: entities
+      entities:
+        - input_select.cube_mode

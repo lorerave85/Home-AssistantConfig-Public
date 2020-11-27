@@ -1,0 +1,13 @@
+- id: '1605803491816'
+  alias: New_value_AQI
+  trigger:
+  - platform: state
+    entity_id: fan.air_purifier
+    attribute: aqi
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/aqi
+      payload_template: "{{ state_attr('fan.air_purifier','aqi') }}"
+  mode: single

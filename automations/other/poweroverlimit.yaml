@@ -1,0 +1,19 @@
+- id: '1602489527898'
+  alias: PowerOverLimit
+  description: ''
+  trigger:
+  - platform: numeric_state
+    entity_id: sensor.power_line
+    above: 5000
+    for: 25
+  condition: []
+  action:
+  - service: notify.famiglia
+    data:
+      message: Rilevato consumo eccessivo
+      title: '*Energia*'
+  - service: tts.google_say
+    data:
+      message: Rilevato consumo energetico eccessivo 
+      entity_id: media_player.googlehome_soggiorno
+  mode: single

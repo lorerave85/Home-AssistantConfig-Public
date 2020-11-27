@@ -114,7 +114,7 @@ camera:
 climate:
   - platform: smartir
     name: Condizionatore Salotto
-    controller_data: remote.broadlink_remote
+    controller_data: remote.rcmini4_remote
     device_code: !secret device_code
 
 #OK
@@ -142,4 +142,3 @@ device_tracker:
   - platform: ping
     hosts:
       hostone: !secret hostone_ip
-
