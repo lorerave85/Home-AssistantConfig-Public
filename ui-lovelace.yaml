@@ -109,26 +109,7 @@ views:
       #          min: 0
       #          
                 
-      - type: glance
-        title: Scene
-        show_state: false
-        entities:   
-          - entity: scene.soggiorno_sera 
-            icon: mdi:weather-night
-            tap_action:
-              action: call-service
-              service: scene.turn_on
-              service_data:
-                entity_id: scene.soggiorno_sera 
-          - entity: scene.soggiorno_film
-            icon: mdi:movie-open-outline
-            tap_action:
-              action: call-service
-              service: scene.turn_on
-              service_data:
-                entity_id: scene.soggiorno_film
-
-           
+     
           #- entity: scene.soggiorno_sera
           #  tap_action: call-service
           #  service: scene.turn_on

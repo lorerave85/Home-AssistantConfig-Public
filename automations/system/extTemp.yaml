@@ -1,0 +1,12 @@
+- id: '1605803491825'
+  alias: New_value_ExtTemp
+  trigger:
+  - platform: state
+    entity_id: sensor.external_temperature
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/exttemp
+      payload_template: "{{ states('sensor.external_temperature') | float * 10 }}"
+  mode: single

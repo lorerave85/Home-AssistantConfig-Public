@@ -74,3 +74,77 @@
     switch.on_off_plug_in_unit_12:
       friendly_name: On/Off plug-in unit 12
       state: 'off'
+- id: '1606942237813'
+  name: Soggiorno Giorno
+  entities:
+    light.aqara_03:
+      min_mireds: 140
+      max_mireds: 650
+      brightness: 182
+      color_temp: 650
+      is_deconz_group: false
+      friendly_name: Aqara2
+      supported_features: 43
+      state: 'on'
+    light.aqara_01:
+      min_mireds: 140
+      max_mireds: 650
+      brightness: 182
+      color_temp: 650
+      is_deconz_group: false
+      friendly_name: Aqara3
+      supported_features: 43
+      state: 'on'
+    light.aqara_02:
+      min_mireds: 140
+      max_mireds: 650
+      brightness: 208
+      color_temp: 650
+      is_deconz_group: false
+      friendly_name: Aqara4
+      supported_features: 43
+      state: 'on'
+    light.color_temperature_light_ikea:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Color temperature light 14
+      supported_features: 43
+      state: 'off'
+    switch.on_off_plug_in_unit_12:
+      friendly_name: On/Off plug-in unit 12
+      state: 'off'
+- id: '1607189147886'
+  name: Soggiorno Dark
+  entities: 
+    light.aqara_03:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Aqara2
+      supported_features: 43
+      state: 'off'
+    light.aqara_01:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Aqara3
+      supported_features: 43
+      state: 'off'
+    light.aqara_02:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Aqara4
+      supported_features: 43
+      state: 'off'
+    light.color_temperature_light_ikea:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Color temperature light 14
+      supported_features: 43
+      state: 'off'
+    switch.on_off_plug_in_unit_12:
+      friendly_name: On/Off plug-in unit 12
+      state: 'off'
