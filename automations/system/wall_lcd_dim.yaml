@@ -1,0 +1,12 @@
+- id: '1605803491916'
+  alias: Wall_LCD_dim
+  trigger:
+  - platform: state
+    entity_id: input_number.lcd_dim
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/dim
+      payload_template: "{{ states('input_number.lcd_dim') }}"
+  mode: single

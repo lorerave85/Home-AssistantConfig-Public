@@ -1,3 +1,39 @@
+- id: '1602531276791'
+  name: Soggiorno Libro
+  entities:
+    light.aqara_03:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Aqara2
+      supported_features: 43
+      state: 'off'
+    light.aqara_01:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Aqara3
+      supported_features: 43
+      state: 'off'
+    light.aqara_02:
+      min_mireds: 140
+      max_mireds: 650
+      is_deconz_group: false
+      friendly_name: Aqara4
+      supported_features: 43
+      state: 'off'
+    light.color_temperature_light_ikea:
+      min_mireds: 140
+      max_mireds: 650
+      brightness: 120
+      color_temp: 430
+      is_deconz_group: false
+      friendly_name: Color temperature light 14
+      supported_features: 43
+      state: 'on'
+    switch.on_off_plug_in_unit_12:
+      friendly_name: On/Off plug-in unit 12
+      state: 'off'
 - id: '1602531846790'
   name: Soggiorno Film
   entities:

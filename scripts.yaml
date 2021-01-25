@@ -41,49 +41,11 @@
     data_template:
       message: La temperatura esterna è di {{states('sensor.external_temperature')}}
         gradi
-
-
-## DEMUX 00 -> 0001
-#'1595266082013':
-#  alias: Pompa1OFF-Pompa2OFF
-#  sequence:
-#  - data: {}
-#    entity_id: switch.pin18
-#    service: switch.turn_off
-#  - data: {}
-#    entity_id: switch.pin23
-#    service: switch.turn_off
-#
-## DEMUX 10 -> 0010
-#'1595266082014':
-#  alias: Pompa1ON-Pompa2OFF
-#  sequence:
-#  - data: {}
-#    entity_id: switch.pin18
-#    service: switch.turn_on
-#  - data: {}
-#    entity_id: switch.pin23
-#    service: switch.turn_off
-#
-## DEMUX 01 -> 0100
-#'1595266082015':
-#  alias: Pompa1OFF-Pompa2ON
-#  sequence:
-#  - data: {}
-#    entity_id: switch.pin18
-#    service: switch.turn_off
-#  - data: {}
-#    entity_id: switch.pin23
-#    service: switch.turn_on
-#
-## DEMUX 11 -> 1000
-#'1595266082016':
-#  alias: Pompa1ON-Pompa2ON
-#  sequence:
-#  - data: {}
-#    entity_id: switch.pin18
-#    service: switch.turn_on
-#  - data: {}
-#    entity_id: switch.pin23
-#    service: switch.turn_on
-#
+synt_time_lcd:
+  alias: Synt Time LCD
+  sequence:
+  - service: mqtt.publish
+    data:
+      topic: home/timestamp
+      payload_template: '{{ as_timestamp(now()) | int }}'
+  mode: single

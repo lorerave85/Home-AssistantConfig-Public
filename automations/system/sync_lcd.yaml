@@ -1,0 +1,11 @@
+- id: '1611408172521'
+  alias: LCD Sync clock
+  trigger:
+  - platform: time_pattern
+    minutes: '1'
+  condition: []
+  action:
+  - service: script.turn_on
+    data: {}
+    entity_id: script.synt_time_lcd
+  mode: single

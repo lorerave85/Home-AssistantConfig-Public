@@ -1,0 +1,77 @@
+- id: '1605803491835'
+  alias: New_value_FinCucina
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.openclose_16
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/finestra
+      payload_template: "{\"Finestra\":\"Cucina\",\"Status\":\"{{ states('binary_sensor.openclose_16') }}\"}"
+  mode: single
+
+- id: '1605803491836'
+  alias: New_value_FinSoggiorno
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.openclose_14
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/finestra
+      payload_template: "{\"Finestra\":\"Soggiorno\",\"Status\":\"{{ states('binary_sensor.openclose_14') }}\"}"
+  mode: single
+
+- id: '1605803491837'
+  alias: New_value_FinSoggiornoPiccola
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.openclose_19
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/finestra
+      payload_template: "{\"Finestra\":\"SoggiornoPiccola\",\"Status\":\"{{ states('binary_sensor.openclose_19') }}\"}"
+  mode: single
+
+- id: '1605803491838'
+  alias: New_value_FinLudovica
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.openclose_15
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/finestra
+      payload_template: "{\"Finestra\":\"Ludovica\",\"Status\":\"{{ states('binary_sensor.openclose_15') }}\"}"
+  mode: single
+
+- id: '1605803491839'
+  alias: New_value_FinCamera
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.openclose_17
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/finestra
+      payload_template: "{\"Finestra\":\"Camera\",\"Status\":\"{{ states('binary_sensor.openclose_17') }}\"}"
+  mode: single
+
+- id: '1605803491840'
+  alias: New_value_FinBagno
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.openclose_18
+  condition: []
+  action:
+  - service: mqtt.publish
+    data:
+      topic: home/notification/finestra
+      payload_template: "{\"Finestra\":\"Bagno\",\"Status\":\"{{ states('binary_sensor.openclose_18') }}\"}"
+  mode: single

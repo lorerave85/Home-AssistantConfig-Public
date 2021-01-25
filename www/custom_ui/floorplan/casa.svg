@@ -14,7 +14,10 @@
    version="1.1"
    id="svg10129"
    sodipodi:docname="casa.svg"
-   inkscape:version="1.0.1 (c497b03c, 2020-09-10)">
+   inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
+   inkscape:export-filename="/Users/ravello001/bitmap.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs10123" />
   <sodipodi:namedview
@@ -24,9 +27,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.7120612"
-     inkscape:cx="291.99234"
-     inkscape:cy="161.82429"
+     inkscape:zoom="0.29207191"
+     inkscape:cx="1464.1864"
+     inkscape:cy="673.89872"
      inkscape:document-units="mm"
      inkscape:current-layer="layer6"
      inkscape:document-rotation="0"
@@ -34,7 +37,7 @@
      inkscape:window-width="1440"
      inkscape:window-height="806"
      inkscape:window-x="44"
-     inkscape:window-y="25"
+     inkscape:window-y="23"
      inkscape:window-maximized="0"
      width="1920mm"
      units="px"
@@ -158,133 +161,6 @@
          x="534.75983"
          id="tspan4483-7"
          sodipodi:role="line">Km/h</tspan></text>
-    <g
-       id="g4253"
-       transform="matrix(0.09090909,0,0,0.09090909,-49.45785,218.38032)">
-      <g
-         id="g2383"
-         style="stroke:#808080;stroke-opacity:1">
-        <path
-           class="st0"
-           d="M 90,77.2 C 90,74.9 88.1,73 85.8,73 H 10.2 C 7.9,73 6,74.9 6,77.2 v 1.6 c 0,2.3 1.9,4.2 4.2,4.2 h 75.6 c 2.3,0 4.2,-1.9 4.2,-4.2 z"
-           id="path2381"
-           style="stroke:#808080;stroke-opacity:1" />
-      </g>
-      <line
-         class="st0"
-         x1="15"
-         x2="20"
-         y1="83"
-         y2="73"
-         id="line2385"
-         style="stroke:#808080;stroke-opacity:1" />
-      <line
-         class="st0"
-         x1="25"
-         x2="30"
-         y1="83"
-         y2="73"
-         id="line2387"
-         style="stroke:#808080;stroke-opacity:1" />
-      <line
-         class="st0"
-         x1="35"
-         x2="40"
-         y1="83"
-         y2="73"
-         id="line2389"
-         style="stroke:#808080;stroke-opacity:1" />
-      <line
-         class="st0"
-         x1="45"
-         x2="50"
-         y1="83"
-         y2="73"
-         id="line2391"
-         style="stroke:#808080;stroke-opacity:1" />
-      <line
-         class="st0"
-         x1="55"
-         x2="60"
-         y1="83"
-         y2="73"
-         id="line2393"
-         style="stroke:#808080;stroke-opacity:1" />
-      <line
-         class="st0"
-         x1="65"
-         x2="70"
-         y1="83"
-         y2="73"
-         id="line2395"
-         style="stroke:#808080;stroke-opacity:1" />
-      <line
-         class="st0"
-         x1="75"
-         x2="80"
-         y1="83"
-         y2="73"
-         id="line2397"
-         style="stroke:#808080;stroke-opacity:1" />
-      <polyline
-         class="st2"
-         points="14,86 14,92 22,92 22,86 "
-         id="polyline2399"
-         style="stroke:#808080;stroke-opacity:1" />
-      <polyline
-         class="st2"
-         points="74,86 74,92 82,92 82,86 "
-         id="polyline2401"
-         style="stroke:#808080;stroke-opacity:1" />
-      <path
-         class="st1"
-         d="M 47.3,38 C 45.6,35.4 44,34.9 44,32.7 44,28.2 48,16 48,16"
-         id="path2403"
-         style="stroke:#808080;stroke-opacity:1" />
-      <path
-         class="st1"
-         d="m 48,66 c 0,0 4,-10.2 4,-14.7"
-         id="path2405"
-         style="stroke:#808080;stroke-opacity:1" />
-      <path
-         class="st1"
-         d="m 32,66 c 0,0 4,-12.2 4,-16.7 0,-4.8 -8,-11.7 -8,-16.7 0,-4.5 4,-16.7 4,-16.7"
-         id="path2407"
-         style="stroke:#808080;stroke-opacity:1" />
-      <path
-         class="st1"
-         d="m 64,66 c 0,0 4,-10.2 4,-14.7"
-         id="path2409"
-         style="stroke:#808080;stroke-opacity:1" />
-      <path
-         class="st1"
-         d="m 80,66 c 0,0 4,-10.2 4,-14.7"
-         id="path2411"
-         style="stroke:#808080;stroke-opacity:1" />
-      <path
-         class="st1"
-         d="m 16,66 c 0,0 4,-12.2 4,-16.7 0,-4.8 -8,-11.7 -8,-16.7 0,-4.5 4,-16.7 4,-16.7"
-         id="path2413"
-         style="stroke:#808080;stroke-opacity:1" />
-      <polygon
-         class="st5"
-         points="89,45 51,45 70,7 "
-         id="polygon2415"
-         style="stroke:#808080;stroke-opacity:1" />
-      <polygon
-         class="st1"
-         points="71,23 70,34 69,23 "
-         id="polygon2417"
-         style="stroke:#808080;stroke-opacity:1" />
-      <line
-         class="st1"
-         x1="70"
-         x2="70"
-         y1="39"
-         y2="39"
-         id="line2419"
-         style="stroke:#808080;stroke-opacity:1" />
-    </g>
   </g>
   <g
      style="display:none"

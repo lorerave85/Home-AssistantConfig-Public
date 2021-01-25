@@ -72,6 +72,18 @@ cards:
         - entity: sensor.pi_shunt_voltage
           name: Shunt Voltage
 
+
+- type: custom:vertical-stack-in-card
+  title: Illuminazione LCD Wall
+  cards:
+    - type: entities
+      entities:
+        - entity: input_number.lcd_dim
+          type: custom:slider-entity-row
+          name: LCD lux
+          full_row: true
+
+
 - type: custom:vertical-stack-in-card
   title: Alimentazione esterna 12V
   cards:
