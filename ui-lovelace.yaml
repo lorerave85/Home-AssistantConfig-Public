@@ -49,17 +49,19 @@ views:
     title: Experimental
     panel: true
     cards:
-      - type: glance
-        show_state: false
-        entities:   
-          - entity: scene.soggiorno_giorno 
-            name: giorno
-            icon: mdi:white-balance-sunny
-            tap_action:
-              action: call-service
-              service: scene.turn_on
-              service_data:
-                entity_id: scene.soggiorno_giorno
+      - type: entities
+        entities:
+        - entity: input_number.lcd_dim
+          type: custom:slider-entity-row
+          name: LCD lux
+          full_row: true  
+        - entity: script.synt_time_lcd
+          
+          
+            
+
+
+
       #- type: glance
       #  entities:
       #  - entity: light.rele2wayc_01

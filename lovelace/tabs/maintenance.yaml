@@ -74,7 +74,7 @@ cards:
 
 
 - type: custom:vertical-stack-in-card
-  title: Illuminazione LCD Wall
+  title: LCD Wall
   cards:
     - type: entities
       entities:
@@ -82,7 +82,7 @@ cards:
           type: custom:slider-entity-row
           name: LCD lux
           full_row: true
-
+        - entity: script.synt_time_lcd
 
 - type: custom:vertical-stack-in-card
   title: Alimentazione esterna 12V
@@ -94,4 +94,3 @@ cards:
         show_state: false
         tap_action:
           action: toggle
-

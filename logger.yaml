@@ -10,6 +10,8 @@ logs:
   homeassistant.components.python_script.my_new_script.py: debug
   # log level for SmartThings lights
   homeassistant.components.smartthings.light: info
+  # log level for mitemp_bt
+  homeassistant.components.mitemp_bt.sensor: error
   # log level for a custom component
   custom_components.my_integration: debug
   # log level for the `aiohttp` Python package

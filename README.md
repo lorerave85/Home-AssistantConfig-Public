@@ -23,9 +23,9 @@
 ### Docker
 Installiamo i componenti di network
 ```bash
-sudo apt-get install apt-transport-https ca-certificates curl avahi-daemon dbus -y
-sudo apt-get install jq apparmor-utils socat software-properties-common -y
-sudo apt-get install network-manager -y
+sudo apt install apt-transport-https ca-certificates curl avahi-daemon dbus -y
+sudo apt install jq apparmor-utils socat software-properties-common -y
+sudo apt install network-manager -y
 ```
 Riavviamo
 ```bash
@@ -35,8 +35,8 @@ Installiamo il docker deamon
 ```bash
 curl -fsSL https://download.docker.com/linux/raspbian/gpg | sudo apt-key add -
 echo "deb [arch=armhf] https://download.docker.com/linux/raspbian buster stable" | sudo tee /etc/apt/sources.list.d/docker.list
-sudo apt-get update
-sudo apt-get install docker-ce -y
+sudo apt update
+sudo apt install docker-ce -y
 ```
 
 A questo punto dobbiamo perfezionare la configurazione. 
@@ -74,7 +74,7 @@ sudo tvservice --off
 Installiamo ora l'agente hassio che si occuperà di predisporre il sistema per il primo avvio
 ```bash
 sudo -i
-curl -sL https://raw.githubusercontent.com/home-assistant/hassio-installer/master/hassio_install.sh | bash -s -- -m raspberrypi3
+curl -sL https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh | bash -s -- -m raspberrypi4
 ```
 
 ## Addons base
@@ -172,32 +172,33 @@ Questo modulo può essere scaricato da HACS direttamente.
 ### Modulo base
 ```bash
 cd ~
-sudo apt-get install git git-core cmake libusb-1.0-0-dev build-essential
+sudo apt install cmake rtl-sdr librtlsdr-dev
 git clone git://git.osmocom.org/rtl-sdr.git
 cd rtl-sdr/ && mkdir build && cd build/
 cmake ../ -DINSTALL_UDEV_RULES=ON
-sudo make
+make
 sudo make install
 sudo ldconfig
 cd ~
 sudo cp ./rtl-sdr/rtl-sdr.rules /etc/udev/rules.d/
-sudo reboot
 # create file no-rtl.conf
 sudo nano /etc/modprobe.d/no-rtl.conf
 # add these three lines
 blacklist dvb_usb_rtl28xxu
 blacklist rtl2832
 blacklist rtl2830
+
 sudo reboot
 lsusb
 rtl_test -t
 ```
 ### Modulo 433MHz
 ```bash
-sudo apt-get install libtool libusb-1.0.0-dev librtlsdr-dev rtl-sdr doxygen
+
+sudo apt install cmake rtl-sdr librtlsdr-dev
 git clone https://github.com/merbanan/rtl_433.git
-cd rtl_433/ && mkdir build &&
-cd build && cmake ../ &&
+cd rtl_433/ && mkdir build && cd build
+cmake ../
 make
 sudo make install
 Test installation:
@@ -215,7 +216,7 @@ https://github.com/joergsteinkamp/dump1090/commit/d219d463ef4b8793e1e41790853ee3
 
 ### Installare mosquitto (sender)
 ```bash
-sudo apt-get install mosquitto-clients
+sudo apt install mosquitto-clients
 ```
 
 ### Attivazione servizi
@@ -242,25 +243,26 @@ sudo raspi-config
 * MCP3008 CS/SHDN to Raspberry Pi CE0
 
 ### Configurazione
+Installare i moduli python3.7 necessari
 ```bash
-sudo apt-get update
-sudo apt-get install build-essential python-dev python-smbus git
-cd ~
-git clone https://github.com/adafruit/Adafruit_Python_MCP3008.git
-cd Adafruit_Python_MCP3008
-sudo python setup.py install
+pip3 install adafruit-circuitpython-busdevice
+pip3 install adafruit-circuitpython-mcp3xxx
+sudo apt install python3-rpi.gpio
 ```
 
 ## INA219
 ### Connessione tra Raspberry e INA
-TO DO
-
+Installare i moduli python3.7 necessari
+```bash
+sudo apt install python3-pip
+sudo pip3 install pi-ina219
+```
 
 
 ## API for host service
 ### Installiamo Apache e il modulo cgi
 ```bash
-sudo apt-get install apache2
+sudo apt install apache2
 sudo a2enmod cgi
 ```
 
@@ -274,7 +276,7 @@ chmod +x .cgi
 ```
 
 ### Sicurezza
-In /etc/apache2/ports.conf cambiamo la porta da 80 a 8083
+In /etc/apache2/ports.conf cambiamo la porta da 80 a 8033
 
 
 Puliamo ogni file dalla cartella /var/www
